@@ -1,0 +1,4424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>IBM Spectrum LSF&reg Version 10.1 - Getting Started with LSF</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#003366" vlink="#5C81AA" alink="#FF9900">
+<basefont size="2" face="Helvetica, Arial, sans-serif">
+
+<blockquote>
+
+<hr>
+<h1>
+  <a name="1568858"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Getting Started with IBM Spectrum LSF (lsf_quick_admin.html)</font>
+</h1>
+<hr align="left">
+
+<!-- START PAGE CONTENT -->
+
+<div>
+<h4>
+  <a name="1568864"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Version&nbsp;10.1 </font></h4>
+</div>
+<div>
+<h4>
+  <a name="1497362"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Sat Jul 13 19:23:11 WIB 2019
+</font>
+</h4>
+</div>
+<div>
+
+</div>
+<div>
+
+</div>
+<div>
+<h4>
+  <a name="1573542"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Contents
+</font>
+</h4>
+</div>
+<ul>
+  <li><a name="1497376"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1497395">About LSF Cluster labkdd</a>
+</font>
+  <li><a name="1497381"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498379">Working with LSF</a>
+</font>
+  <li><a name="1497385"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499313">Managing Your Cluster</a>
+</font>
+ 
+  <li><a name="1497393"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1522120">Troubleshooting LSF Problems</a>
+</font>
+</ul>
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1497395"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+About LSF Cluster labkdd
+</font>
+</h2>
+
+<div>
+<h4>
+  <a name="1497396"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Contents
+</font>
+</h4>
+</div>
+<ul>
+  <li><a name="1497399"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1497407">Cluster Characteristics</a>
+</font>
+  <li><a name="1497403"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1497459">LSF Directories and Configuration Files</a>
+</font>
+</ul>
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1497407"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Cluster Characteristics
+</font>
+</h2>
+
+<ul>
+  <li><a name="1497411"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1497419">Cluster name and properties </a>
+</font>
+  <li><a name="1497415"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1497438">LSF hosts</a>
+</font>
+</ul>
+
+<h3>
+  <a name="1497419"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Cluster name and properties</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Your cluster <code><font face="courier" size="3">labkdd</font></code> was installed according to the installation options specified by: </font></p>
+
+
+<pre><font size="3">
+lsfinstall&nbsp;-f&nbsp;/home/bayudwiyansatria/lsfsce10.2.0.6-x86_64/lsf/lsf10.1_lsfinstall/install.config
+</font></pre>
+<ul>
+  <li><a name="596964"> </a> <font face="Helvetica, Arial, sans-serif"> LSF installed by user: root </font>
+  <li><a name="596966"> </a> <font face="Helvetica, Arial, sans-serif"> <code><font face="courier" size="3">lsfinstall</font></code> directory: </font>
+      <p> <font face="Helvetica, Arial, sans-serif"> /home/bayudwiyansatria/lsfsce10.2.0.6-x86_64/lsf/lsf10.1_lsfinstall </font></p>
+  <li><a name="596968"> </a> <font face="Helvetica, Arial, sans-serif"> LSF installation options file: </font>
+      <p> <font face="Helvetica, Arial, sans-serif"> /home/bayudwiyansatria/lsfsce10.2.0.6-x86_64/lsf/lsf10.1_lsfinstall/install.config </font></p>
+  <li><a name="596970"> </a> <font face="Helvetica, Arial, sans-serif"> Installation log: </font>
+      <p> <font face="Helvetica, Arial, sans-serif"> /home/bayudwiyansatria/lsfsce10.2.0.6-x86_64/lsf/lsf10.1_lsfinstall/Install.log</font></p>
+  <li><a name="596970"> </a> <font face="Helvetica, Arial, sans-serif"> Cluster name: </font><font face="Helvetica, Arial, sans-serif">labkdd</font>
+  <li> <a name="596976"> </a> <font face="Helvetica, Arial, sans-serif"> Top-level LSF installation directory: </font>
+      <p> <font face="Helvetica, Arial, sans-serif"> /usr/share/lsf </font></p>
+  <li> <font face="Helvetica, Arial, sans-serif"> Current LSF version: 10.1 </font>
+  
+      
+  <li><a name="591401"> </a> <font face="Helvetica, Arial, sans-serif"> Primary LSF cluster administrator: lsfadmin</font><font face="Helvetica, Arial, sans-serif"> </font>
+  <li><a name="596978"> </a> <font face="Helvetica, Arial, sans-serif">Daemon management by EGO: Y </font>
+      <p> <font face="Helvetica, Arial, sans-serif"> "Y" means that EGO Service Controller will manage LSF res and sbatchd.</font></p>
+      <p> <font face="Helvetica, Arial, sans-serif"> "N" means that LSF res and sbatchd are started manually.</font></p>
+  <li><a name="596978"> </a> <font face="Helvetica, Arial, sans-serif">Dynamic hosts: Y </font>
+      <p> <font face="Helvetica, Arial, sans-serif"> "Y" means that you can add or remove cluster hosts dynamically.</font></p>
+   
+</ul>
+<h3>
+  <a name="1497438"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+LSF hosts </font>
+</h3>
+
+<ul><li><a name="1497447"> </a>
+      <font face="Helvetica, Arial, sans-serif">
+  Host types installed in LSF cluster <code><font face="courier" size="3">labkdd</font></code>:
+      </font>
+  
+      <p>
+        <font face="Helvetica, Arial, sans-serif">
+      linux2.6-glibc2.3-x86_64
+      </font></p>
+      <p>
+        <font face="Helvetica, Arial, sans-serif">
+      These hosts are listed in the <code><font face="courier" size="3">Hosts</font></code> section of 
+      <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code>.
+    </font></p>
+  <li><a name="1497450"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF master host: blade1-node
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+</font></p>  
+  <li> <font face="Helvetica, Arial, sans-serif"> <a name="1497452"> </a> LSF master host and master candidates (all automatically become EGO management hosts): </font>
+    <p> <font face="Helvetica, Arial, sans-serif"> blade1-node </font></p>  
+  <li><a name="1497452"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Server hosts defined in LSF cluster <code><font face="courier" size="3">labkdd</font></code>:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+ blade1-node blade2-node
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF server hosts defined in your cluster are indicated by 1 in the server column of 
+the Hosts section of 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code>.
+ </font></p>
+
+  <li><a name="1497455"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Client-only hosts defined in LSF cluster <code><font face="courier" size="3">labkdd</font></code>:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+NONE
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF client-only hosts are indicated by <code><font face="courier" size="3">0</font></code> (zero) in the server column of the Hosts 
+section of <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code>.
+</font></p>  
+  </ul>
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1497459"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+LSF Directories and Configuration Files
+</font>
+</h2>
+
+<ul>
+  <li><a name="1497463"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1497490">Four important LSF configuration files</a>
+</font>
+  <li><a name="1497471"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1497519">LSF directories</a>
+</font>
+  <li><a name="1497475"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1497575">LSF cluster configuration files</a>
+</font>
+  <li><a name="1497479"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1523504">LSF Batch configuration files</a>
+</font>
+  <li><a name="1497487"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1523556">Daemon log files</a>
+</font>
+</ul>
+
+<h3>
+  <a name="1497490"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Four important LSF configuration files
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF configuration is administered through several configuration files, which you use to 
+modify the behavior of your cluster. The four most important files you will work with 
+most often are:
+ </font></p>
+
+<ul>
+  <li><a name="1497492"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>
+</font>
+  <li><a name="1497493"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code>
+</font>
+  <li><a name="1497495"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.shared</font></code>
+</font>
+  <li><a name="1497496"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code>
+</font>
+
+
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+These files are created during LSF installation according to the options you specified in 
+the <code><font face="courier" size="3">/usr/share/lsf/10.1/install/install.config</font></code> file. After 
+installation, you can change the configuration parameters in these files to suit the needs 
+of your site; if the LSF parameters you configure have matching parameters in the equivalent EGO file, make sure the values are the same in both files. These are the equivalent EGO files: </font></p>
+<ul>
+  <li><a name="1497492"> </a> <font face="Helvetica, Arial, sans-serif"> <code><font face="courier" size="3">/usr/share/lsf/conf/ego/labkdd/kernel/ego.conf</font></code> </font>
+</ul>
+<p><font face="Helvetica, Arial, sans-serif"><code></code></font></p>
+<div>
+<h4>
+  <a name="1534573"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Who owns these files
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+These files are 
+owned by the primary LSF administrator (lsfadmin), and readable by all 
+cluster users.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1534575"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsf.conf
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The most important file in LSF. It contains the paths to the LSF 
+configuration directories, log directories, libraries and other global 
+configuration information. The location of <code><font face="courier" size="3">lsf.conf</font></code> is defined by the LSF_ENVDIR 
+variable. If LSF cannot find this file, it cannot start properly.
+</font></p>
+
+
+<ul>
+  <li><a name="1497501"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Your file: <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>
+</font>
+</ul>
+
+<h4>
+  <a name="1497502"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsf.cluster.cluster_name
+</font>
+</h4>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Defines the host names, models, and types of all of the hosts in the cluster. It also defines 
+the user names of the LSF administrators, and the locations of different shared resources 
+for one LSF cluster.
+ </font></p>
+
+<ul>
+  <li><a name="1497504"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Your file: <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code>
+</font>
+</ul>
+<div>
+<h4>
+  <a name="1497505"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsf.shared
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+This file is like a dictionary that defines all the keywords used by the LSF cluster. You 
+can add your own keywords to specify the names of resources or host types.
+ </font></p>
+
+<ul>
+  <li><a name="1497507"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Your file: <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.shared</font></code>
+</font>
+</ul>
+<div>
+<h4>
+  <a name="1497508"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsb.queues
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Defines the LSF batch queues and their parameters for one LSF cluster.
+ </font></p>
+
+<ul>
+  <li><a name="1497510"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Your file: <code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code>
+</font>
+</ul>
+
+<h3>
+  <a name="1497519"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+LSF directories
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The following directories are owned by the primary LSF administrator 
+(lsfadmin) and are readable by all cluster users:
+ </font></p>
+
+<ul>
+  <li><a name="1497564"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_CONFDIR--LSF configuration directory:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/conf
+</pre>
+</font>
+  <li><a name="1497566"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSB_CONFDIR--LSF Batch configuration directory:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/conf/lsbatch
+</pre>
+</font>
+  <li><a name="1497568"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSB_SHAREDIR--LSF Batch job history directory:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/work
+</pre>
+</font>
+  <li><a name="1534621"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_LOGDIR--Server daemon error logs, one for each LSF daemon:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/log
+</pre>
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The following directories are owned by root and are readable by all cluster users:
+ </font></p>
+
+<ul>
+  <li><a name="1536695"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_BINDIR--LSF user commands, shared by all hosts of the same type. For example:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/10.1/sparc-sol10/bin/
+</pre>
+</font>
+  <li><a name="1540922"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_INCLUDEDIR--Header files <code><font face="courier" size="3">lsf/lsf.h</font></code> and <code><font face="courier" size="3">lsf/lsbatch.h</font></code>:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/10.1/include
+</pre>
+</font>
+  <li><a name="1536698"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_LIBDIR--LSF libraries, shared by all hosts of the same type. For example:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/10.1/sparc-sol10/lib/
+</pre>
+</font>
+  <li><a name="1540937"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_MANDIR--LSF man pages:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/10.1/man
+</pre>
+</font>
+  <li><a name="1536701"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_MISC--Examples and other miscellaneous files:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/10.1/misc
+</pre>
+</font>
+  <li><a name="1536702"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_SERVERDIR--Server daemon binaries, scripts and other utilities, shared by all hosts of the same type. For example:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf/10.1/sparc-sol10/etc/
+</pre>
+</font>
+  <li><a name="1536704"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_TOP--Top-level installation directory:
+</font>
+<font size="3">
+<pre>
+/usr/share/lsf
+</pre>
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Other configuration directories are specified in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>.
+ </font></p>
+
+
+<h3>
+  <a name="1497575"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+LSF cluster configuration files
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The following files are owned by the primary LSF administrator (lsfadmin) 
+and are readable by all cluster users:
+ </font></p>
+
+<ul>
+
+  <li><a name="1497625"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF global configuration files describing the configuration and operation of the cluster <code><font face="courier" size="3">labkdd</font></code>:
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/ego/labkdd/kernel/ego.conf</font></code> 
+ </font></p>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code> 
+ </font></p>
+
+  <li><a name="1497627"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF keyword definition file shared by all clusters. Defines cluster name, host types, host models, and site-specific resources:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.shared
+</font></code> </font></p>
+
+  <li><a name="1497629"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF cluster configuration file that defines hosts, administrators, and location of site-defined shared resources:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd
+</font></code> </font></p>
+
+  <li><a name="1497631"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF mapping files for task names and their default resource requirements:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.task
+</font></code> </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.task.labkdd
+</font></code> </font></p>
+
+</ul>
+
+<h3>
+  <a name="1523504"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+LSF Batch configuration files
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The following files are owned by the primary LSF administrator (lsfadmin) 
+and are readable by all cluster users:
+ </font></p>
+
+<ul>
+  <li><a name="1523505"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF server hosts and their attributes, such as scheduling load thresholds, dispatch windows, and job slot limits:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.hosts
+</font></code> </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If no hosts are defined in this file, then all LSF server hosts listed in 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code> are assumed to be 
+LSF Batch server hosts.
+ </font></p>
+
+  <li><a name="1523508"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF scheduler and resource broker plugin modules. If no scheduler or resource broker modules are configured, LSF uses the default scheduler plugin module named schmod_default:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.modules
+</font></code> </font></p>
+
+  <li><a name="1523510"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF Batch system parameter file:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.params
+</font></code> </font></p>
+
+  <li><a name="1523512"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF job queue definitions:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues
+</font></code> </font></p>
+
+  <li><a name="1523514"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Resource allocation limits, exports, and resource usage limits:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.resources
+</font></code> </font></p>
+
+  <li><a name="1523516"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF user groups, hierarchical fairshare for users and user groups, and job slot limits for users and user groups:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.users
+</font></code> </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Also used to configure account mappings in a MultiCluster environment.
+ </font></p>
+
+  <li><a name="1523516"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Application profiles, common parameters for the same type of jobs, including the execution requirements of the applications, the resources they require, and how they should be run and managed 
+:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.applications</font></code> </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+This file is optional. Use the DEFAULT_APPLICATION parameter in <code><font face="courier" size="3">lsb.params</font></code> to specify a default application profile for all jobs. LSF does not automatically assign a default application profile.</font></p>
+ 
+</ul>
+
+<h3>
+  <a name="1558659"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+LSF Batch log files
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+
+
+ </font></p>
+
+<ul>
+  <li><a name="1558687"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF Batch events log:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/work/labkdd/logdir/lsb.events
+</font></code> </font></p>
+
+  <li><a name="1558689"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF Batch accounting log:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/work/labkdd/logdir/lsb.acct
+</font></code> </font></p>
+
+</ul>
+
+<h3>
+  <a name="1523556"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Daemon log files
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF server daemon log files are stored in /usr/share/lsf/log:
+ </font></p>
+
+<ul>
+  <li><a name="1497811"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Load Information Manager (<code><font face="courier" size="3">lim</font></code>)
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/lim.log.<em>host_name
+</em></font></code> </font></p>
+
+  <li><a name="1497813"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Remote Execution Server (<code><font face="courier" size="3">res</font></code>)
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/res.log.</font></code><code><font face="courier" size="3"><em>host_name
+</em></font></code> </font></p>
+
+  <li><a name="1497815"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Master Batch Daemon (<code><font face="courier" size="3">mbatchd</font></code>)
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/mbatchd.log.blade1-node
+</font></code> </font></p>
+
+  <li><a name="1497817"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Master Scheduler Daemon (<code><font face="courier" size="3">mbschd</font></code>)
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/mbschd.log.blade1-node
+</font></code> </font></p>
+
+  <li><a name="1497819"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Slave Batch Daemon (<code><font face="courier" size="3">sbatchd</font></code>)
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/sbatchd.log.</font></code><code><font face="courier" size="3"><em>host_name
+</em></font></code> </font></p>
+
+  <li><a name="1497821"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Process Information Manager (<code><font face="courier" size="3">pim</font></code>)
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/pim.log.<em>host_name
+</em></font></code> </font></p>
+
+</ul>
+<div>
+<h4>
+  <a name="1541386"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Who owns and who should write to this directory
+</font>
+</h4>
+</div>
+
+<p>
+<hr>
+<font face="Helvetica, Arial, sans-serif">
+Make sure that the primary LSF administrator (lsfadmin) owns the LSF log 
+directory (/usr/share/lsf/log), and that <code><font face="courier" size="3">root</font></code> can write to this directory. If an LSF server 
+is unable to write to /usr/share/lsf/log, then the error logs are created in <code><font face="courier" size="3">/tmp</font></code>.
+ </font><hr>
+</p>
+
+
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1498379"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Working with LSF
+</font>
+</h2>
+
+<div>
+<h4>
+  <a name="1498380"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Contents
+</font>
+</h4>
+</div>
+<ul>
+  <li><a name="1498383"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498394">Starting, Stopping, and Reconfiguring LSF</a>
+</font>
+  <li><a name="1498387"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498521">Checking LSF Status</a>
+</font>
+  <li><a name="1498391"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498803">Running LSF Jobs</a>
+</font>
+</ul>
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1498394"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Starting, Stopping, and Reconfiguring LSF
+</font>
+</h2>
+
+<ul>
+  <li><a name="1498398"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498418">Two LSF administration commands (lsfadmin and badmin)</a>
+</font>
+  <li><a name="1498402"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498426">Setting up the LSF environment (cshrc.lsf and profile.lsf)</a>
+</font>
+  <li><a name="1498406"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498448">Start your cluster</a>
+</font>
+  <li><a name="1498410"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498491">Stop your cluster</a>
+</font>
+  <li><a name="1498414"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498502">Reconfigure your cluster</a>
+</font>
+</ul>
+
+<h3>
+  <a name="1498418"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Two LSF administration commands (lsfadmin and badmin)
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif"><b>
+Only LSF administrators or root can run these commands.
+ </b></font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To start and stop LSF, and to reconfigure LSF after making changes to any configuration 
+file, you use two commands:
+ </font></p>
+
+<ul>
+  <li><a name="1498422"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">lsadmin</font></code> controls the operation of <code><font face="courier" size="3">lim</font></code> and <code><font face="courier" size="3">res</font></code>
+</font>
+  <li><a name="1498424"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">badmin</font></code> controls the operation of <code><font face="courier" size="3">mbatchd</font></code> and <code><font face="courier" size="3">sbatchd</font></code>
+</font>
+</ul>
+
+<h3>
+  <a name="1498426"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Setting up the LSF environment (cshrc.lsf and profile.lsf)
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Before using LSF, you must set up the LSF execution environment.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+After logging on to an LSF host, use one of the following shell environment files to set 
+your LSF environment:
+ </font></p>
+
+<ul>
+  <li><a name="1498429"> </a>
+<font face="Helvetica, Arial, sans-serif">
+For <code><font face="courier" size="3">csh</font></code> or <code><font face="courier" size="3">tcsh</font></code>:
+</font>
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>source /usr/share/lsf/conf/cshrc.lsf
+</strong></font></code></pre>
+</font>
+  <li><a name="1498431"> </a>
+<font face="Helvetica, Arial, sans-serif">
+For <code><font face="courier" size="3">sh</font></code>, <code><font face="courier" size="3">ksh</font></code>, or <code><font face="courier" size="3">bash</font></code>:
+</font>
+<font size="3">
+<pre>
+$ <code><font face="courier" size="3"><strong>. /usr/share/lsf/conf/profile.lsf
+</strong></font></code></pre>
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+These two files are created by <code><font face="courier" size="3">lsfinstall</font></code> to set up the LSF operating environment.
+ </font></p>
+
+
+<h3>
+  <a name="1498448"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Start your cluster
+</font>
+</h3>
+
+
+
+<div>
+<h4>
+  <a name="1498459"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Running LSF as a non-root user
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+You installed LSF as user root.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+By default, only <code><font face="courier" size="3">root</font></code> can start LSF daemons. If <code><font face="courier" size="3">lsfinstall</font></code> detected you installed as 
+non-root user, you chose to configure either a multi-user cluster or a single-user cluster:
+ </font></p>
+
+<ul>
+  <li><a name="1498462"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Multi-user--Only <code><font face="courier" size="3">root</font></code> can start LSF daemons. Any user can submit jobs to your cluster.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+See <a href="lsf_quick_admin.html#1522120">Troubleshooting LSF Problems</a> for information about changing ownership and 
+permissions for <code><font face="courier" size="3">lsadmin</font></code> and <code><font face="courier" size="3">badmin</font></code>.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To permit LSF administrators to start and stop LSF daemons, set up 
+<code><font face="courier" size="3">/etc/lsf.sudoers</font></code>, as described in <a href="lsf_quick_admin.html#1499644">Configuring LSF Startup</a>.
+ </font></p>
+
+  <li><a name="1498475"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Single-user--Your user account must be primary LSF administrator (lsfadmin). You are able to start LSF daemons, but only your user account can submit jobs to the cluster. Your user account must be able to read the system kernel information, such as <code><font face="courier" size="3">/dev/kmem</font></code>.
+</font>
+</ul>
+<div>
+<h4>
+  <a name="1498476"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsadmin and badmin
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">lsadmin</font></code> and <code><font face="courier" size="3">badmin</font></code> to start the LSF daemons.
+ </font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1498478"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on as <code><font face="courier" size="3">root</font></code> to each LSF server host ( blade1-node blade2-node). 
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you installed a single-user cluster as a non-root user, log on as primary LSF 
+administrator lsfadmin.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Start with the LSF master host blade1-node, and repeat these steps on all 
+LSF hosts.
+ </font></p>
+
+  <li value="2	"><a name="1498481"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use the following commands to start the LSF cluster:
+</font>
+<font size="3">
+<pre>
+# <code><font face="courier" size="3"><strong>lsadmin limstartup
+</strong></font></code># <code><font face="courier" size="3"><strong>lsadmin resstartup
+</strong></font></code># <code><font face="courier" size="3"><strong>badmin hstartup
+</strong></font></code></pre>
+</font>
+</ol>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Before using any LSF commands, wait a few minutes for <code><font face="courier" size="3">lim</font></code> on all hosts to do the 
+following:
+ </font></p>
+
+<ul>
+  <li><a name="1498486"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Contact each other
+</font>
+  <li><a name="1498487"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Select the master host
+</font>
+  <li><a name="1498488"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Exchange initialization information
+</font>
+</ul>
+
+<h3>
+  <a name="1498491"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Stop your cluster
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1498492"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsadmin and badmin
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">lsadmin</font></code> and <code><font face="courier" size="3">badmin</font></code> to stop the LSF daemons.
+ </font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1498494"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on as <code><font face="courier" size="3">root</font></code> to any LSF server host ( blade1-node blade2-node).
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you installed a single-user cluster as a non-root user, log on as primary LSF 
+administrator lsfadmin.
+ </font></p>
+
+  <li value="2	"><a name="1546251"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use the following commands to stop the LSF cluster:
+</font>
+<font size="3">
+<pre>
+# <code><font face="courier" size="3"><strong>badmin hshutdown all
+</strong></font></code># <code><font face="courier" size="3"><strong>lsadmin resshutdown all
+</strong></font></code># <code><font face="courier" size="3"><strong>lsadmin limshutdown all
+</strong></font></code></pre>
+</font>
+</ol>
+
+<h3>
+  <a name="1498502"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Reconfigure your cluster
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1498503"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsadmin and badmin
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">lsadmin</font></code> and <code><font face="courier" size="3">badmin</font></code> to reconfigure LSF after making changes to any 
+configuration file.
+ </font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1498505"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on as <code><font face="courier" size="3">root</font></code> to any LSF server host ( blade1-node blade2-node).
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you installed a single-user cluster as a non-root user, log on as primary LSF 
+administrator lsfadmin.
+ </font></p>
+
+  <li value="2	"><a name="1498507"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use the following commands to reconfigure the LSF cluster:
+</font>
+  <ul>
+    <li><a name="1498508"> </a>
+<font face="Helvetica, Arial, sans-serif">
+To reload modified LSF configuration files and restart <code><font face="courier" size="3">lim</font></code>:
+</font>
+<font size="3">
+<pre>
+# <code><font face="courier" size="3"><strong>lsadmin reconfig
+</strong></font></code></pre>
+</font>
+    <li><a name="1498510"> </a>
+<font face="Helvetica, Arial, sans-serif">
+To reload modified LSF Batch configuration files:
+</font>
+<font size="3">
+<pre>
+# <code><font face="courier" size="3"><strong>badmin reconfig
+</strong></font></code></pre>
+</font>
+    <li><a name="1498512"> </a>
+<font face="Helvetica, Arial, sans-serif">
+To reload modified LSF Batch configuration files and restart <code><font face="courier" size="3">mbatchd</font></code>:
+</font>
+<font size="3">
+<pre>
+# <code><font face="courier" size="3"><strong>badmin mbdrestart
+</strong></font></code></pre>
+</font>
+  </ul>
+</ol>
+
+<p>
+<hr>
+<font face="Helvetica, Arial, sans-serif">
+This command also reads the <code><font face="courier" size="3">/usr/share/lsf/work/labkdd/logdir/lsb.events</font></code> file, so it can take some 
+time to complete if a lot of jobs are running.
+ </font><hr>
+</p>
+
+
+
+
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1498521"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Checking LSF Status
+</font>
+</h2>
+
+<ul>
+  <li><a name="1498525"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498544">Example command output</a>
+</font>
+  <li><a name="1498529"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498569">Check cluster configuration (lsadmin)</a>
+</font>
+  <li><a name="1498533"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498651">Find out cluster status (lsid and lsload)</a>
+</font>
+  <li><a name="1498537"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498709">Check LSF Batch configuration (badmin)</a>
+</font>
+  <li><a name="1498541"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498747">Find out LSF Batch system status (bhosts and bqueues)</a>
+</font>
+</ul>
+
+<h3>
+  <a name="1498544"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Example command output
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The LSF commands shown in this section show examples of typical output. The output 
+you see will differ according to your configuration.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The commands are described briefly so that you can easily use them as a "sanity check" 
+for your LSF installation. You can use these commands on any LSF host.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you get proper output from these commands, your cluster is ready to use. If your 
+output from the commands discussed in this section has errors, see <a href="lsf_quick_admin.html#1522120">Troubleshooting 
+LSF Problems</a> or the <em>LSF Command Reference</em> for help.
+ </font></p>
+
+
+<h3>
+  <a name="1498569"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Check cluster configuration (lsadmin)
+</font>
+</h3>
+
+
+<h4>
+  <a name="1498570"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsadmin ckconfig -v
+</font>
+</h4>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">lsadmin</font></code> command controls the operation of an LSF cluster and administers the 
+LSF daemons, <code><font face="courier" size="3">lim</font></code> and <code><font face="courier" size="3">res</font></code>. Use the <code><font face="courier" size="3">lsadmin&nbsp;ckconfig</font></code> command to check the LSF 
+configuration files. The <code><font face="courier" size="3">-v</font></code> flag displays detailed information about the LSF 
+configuration. For example:
+ </font></p>
+
+<font size="3">
+</font>
+<pre><font size="3">
+% <code><font face="courier"><strong>lsadmin ckconfig -v
+</strong></font></code>Checking configuration files ...
+
+
+EGO 3.4.0.0 build 88888, Feb 12 2016
+Copyright IBM Corp. 1992, 2016. All rights reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+
+binary type: linux2.6-glibc2.3-x86_64
+Reading configuration from /usr/share/lsf/conf/ego/labkdd/kernel/ego.conf
+Feb 13 10:31:32 2016 759460 6 3.4.0 Lim starting...
+Feb 13 10:31:32 2016 759460 6 3.4.0 LIM is running in advanced workload execution mode.
+Feb 13 10:31:32 2016 759460 6 3.4.0 Master LIM is not running in EGO_DISABLE_UNRESOLVABLE_HOST mode.
+Feb 13 10:31:32 2016 759460 5 3.4.0 /usr/share/lsf/10.1/linux2.6-glibc2.3-x86_64/etc/lim -C
+Feb 13 10:31:32 2016 759460 6 3.4.0 LIM is running as IBM Spectrum LSF Standard Edition.
+Feb 13 10:31:32 2016 759460 7 3.4.0 chuserId: setresuid/seteuid(0) failed, Operation not permitted.
+Feb 13 10:31:32 2016 759460 3 3.4.0 domanager(): /usr/share/lsf/conf/lsf.cluster.labkdd(15): The cluster manager is the invoker <root> in debug mode
+Feb 13 10:31:32 2016 759460 6 3.4.0 reCheckClass: numhosts 1 so reset exchIntvl to 15.00
+Feb 13 10:31:32 2016 759460 6 3.4.0 Checking Done.
+---------------------------------------------------------
+No errors found.
+
+</font></pre>
+<font size="3">
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The messages shown above are typical output from <code><font face="courier" size="3">lsadmin&nbsp;ckconfig&nbsp;-v</font></code>. Other 
+messages may indicate problems with your LSF configuration.
+ </font></p>
+
+
+
+
+<h3>
+  <a name="1498651"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Find out cluster status (lsid and lsload)
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1498652"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsid
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Tells you if your LSF environment is set up properly. <code><font face="courier" size="3">lsid</font></code> displays the current LSF 
+version number (10.1), cluster name (<code><font face="courier" size="3">labkdd</font></code>), and 
+host name of the current LSF master host for your cluster (blade1-node).
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The LSF master name displayed by <code><font face="courier" size="3">lsid</font></code> may vary, but it is usually the first host 
+configured in the <code><font face="courier" size="3">Hosts</font></code> section of 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code>.
+For example:
+</font>
+</p>
+
+<font size="3">
+</font>
+<pre><font size="3">
+% <code><font face="courier"><strong>lsid
+</strong></font></code>
+
+My cluster name is <code><font face="courier">labkdd
+</font></code>My master name is blade1-node
+</font></pre>
+<font size="3">
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you see the message 
+ </font></p>
+
+<font size="3">
+<pre>
+<code><font face="courier" size="3">Cannot open lsf.conf file
+</font></code></pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+the LSF_ENVDIR environment variable is probably not set correctly. Use 
+<code><font face="courier" size="3">/usr/share/lsf/conf/cshrc.lsf</font></code> or <code><font face="courier" size="3">/usr/share/lsf/conf/profile.lsf</font></code> to set up your 
+environment. See <a href="lsf_quick_admin.html#1501402">Top 10 LSF problems</a> for additional help.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1498670"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsload
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Displays the current load levels of the cluster. The output contains one line for each host 
+in the cluster. The status should be <code><font face="courier" size="3">ok</font></code> for all hosts in your cluster. For example:
+ </font></p>
+
+<font size="3">
+<pre>
+%&nbsp;<code><font face="courier" size="3"><strong>lsload
+</strong></font></code>HOST_NAME&nbsp;&nbsp;status&nbsp;&nbsp;r15s&nbsp;&nbsp;r1m&nbsp;&nbsp;r15m&nbsp;&nbsp;ut&nbsp;&nbsp;&nbsp;pg&nbsp;&nbsp;&nbsp;ls&nbsp;&nbsp;it&nbsp;&nbsp;tmp&nbsp;&nbsp;swp&nbsp;&nbsp;&nbsp;mem
+hostn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0&nbsp;&nbsp;&nbsp;0.0&nbsp;&nbsp;0.1&nbsp;&nbsp;&nbsp;1%&nbsp;&nbsp;&nbsp;0.0&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;224&nbsp;43M&nbsp;&nbsp;67M&nbsp;&nbsp;&nbsp;3M
+hostk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0&nbsp;&nbsp;&nbsp;0.0&nbsp;&nbsp;0.0&nbsp;&nbsp;&nbsp;3%&nbsp;&nbsp;&nbsp;0.0&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;38M&nbsp;&nbsp;40M&nbsp;&nbsp;&nbsp;7M
+hostg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;busy&nbsp;&nbsp;&nbsp;&nbsp;*6.2&nbsp;&nbsp;6.9&nbsp;&nbsp;9.5&nbsp;&nbsp;&nbsp;85%&nbsp;&nbsp;1.1&nbsp;&nbsp;30&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;5M&nbsp;&nbsp;&nbsp;400M&nbsp;&nbsp;385M
+hostf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;busy&nbsp;&nbsp;&nbsp;&nbsp;0.1&nbsp;&nbsp;&nbsp;0.1&nbsp;&nbsp;0.3&nbsp;&nbsp;&nbsp;7%&nbsp;&nbsp;&nbsp;*17&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;9M&nbsp;&nbsp;&nbsp;23M&nbsp;&nbsp;&nbsp;28M
+hostv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unavail
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+A <code><font face="courier" size="3">busy</font></code> status is shown for hosts with any load index beyond its configured thresholds. 
+An asterisk (<code><font face="courier" size="3">*</font></code>) marks load indices that are beyond their thresholds, causing the host 
+status to be <code><font face="courier" size="3">busy</font></code>. A minus sign (<code><font face="courier" size="3">-</font></code>) in front of the value <code><font face="courier" size="3">ok</font></code> means that <code><font face="courier" size="3">res</font></code> is not 
+running on that host.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you see the message
+ </font></p>
+
+<font size="3">
+<pre>
+
+lsid: getentitlementinfo() failed: LIM is down; try later
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+or
+ </font></p>
+
+<font size="3">
+<pre>
+LSF daemon (LIM) not responding ... still trying
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+after starting or reconfiguring LSF, wait a few seconds and try <code><font face="courier" size="3">lsload</font></code> again to give <code><font face="courier" size="3">lim</font></code> 
+on all hosts time to initialize. If the problem persists, see <a href="lsf_quick_admin.html#1501402">Top 10 LSF problems</a> for help.
+ </font></p>
+
+
+
+<div>
+<h4>
+  <a name="1498691"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Other useful commands
+</font>
+</h4>
+</div>
+<ul>
+  <li><a name="1498692"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">lshosts</font></code> command displays configuration information for LSF hosts and their static resource information.
+</font>
+  <li><a name="1498693"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">lsinfo</font></code> command displays cluster configuration information about resources, host types, and host models.
+</font>
+</ul>
+
+<h3>
+  <a name="1498709"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Check LSF Batch configuration (badmin)
+</font>
+</h3>
+
+
+<h4>
+  <a name="1498710"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+badmin ckconfig -v
+</font>
+</h4>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">badmin</font></code> command controls and monitors the operation of the LSF Batch system. 
+Use the <code><font face="courier" size="3">badmin&nbsp;ckconfig</font></code> command to check the LSF Batch configuration files. The 
+<code><font face="courier" size="3">-v</font></code> flag displays detailed information about the configuration:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>badmin ckconfig -v
+</strong></font></code>
+Checking configuration files ...
+---------------------------------------------------------
+No errors found.
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The messages shown above are typical output from <code><font face="courier" size="3">badmin&nbsp;ckconfig&nbsp;-v</font></code>. Other 
+messages may indicate problems with the LSF Batch configuration.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+See <a href="lsf_quick_admin.html#1522120">Troubleshooting LSF Problems</a> for help with some 
+common configuration errors.
+ </font></p>
+
+
+<h3>
+  <a name="1498747"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Find out LSF Batch system status (bhosts and bqueues)
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To use LSF Batch commands, the cluster must be up and running. See <a href="lsf_quick_admin.html#1498448">Start your cluster</a> 
+for information about starting LSF daemons.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1498752"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+bhosts
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">bhosts</font></code> command tells you if LSF Batch is running properly. <code><font face="courier" size="3">bhosts</font></code> displays the 
+status of LSF Batch server hosts in the cluster, and other details about the batch hosts:
+ </font></p>
+
+<ul>
+  <li><a name="1498754"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Maximum number of job slots allowed by a single user
+</font>
+  <li><a name="1498755"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Total number of jobs in the system, jobs running, jobs suspended by users, and jobs suspended by the system
+</font>
+  <li><a name="1498756"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Total number of reserved job slots
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The status should be <code><font face="courier" size="3">ok</font></code> for all hosts in your cluster. For example:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bhosts
+</strong></font></code>HOST_NAME          STATUS       JL/U    MAX  NJOBS    RUN  SSUSP  USUSP    RSV 
+hosta              ok              -      -      0      0      0      0      0
+hostb              ok              -      -      0      0      0      0      0
+hostc              ok              -      -      0      0      0      0      0
+hostd              ok              -      -      0      0      0      0      0
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you see the message
+ </font></p>
+
+<font size="3">
+<pre>
+<code><font face="courier" size="3">batch system daemon not responding ... still trying
+</font></code></pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+after starting or reconfiguring LSF, wait a few seconds and try <code><font face="courier" size="3">bhosts</font></code> again to give 
+<code><font face="courier" size="3">mbatchd</font></code> time to initialize. If the problem persists, see <a href="lsf_quick_admin.html#1501402">Top 10 LSF problems</a> for help.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1498765"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+bqueues 
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF Batch queues organize jobs with different priorities and different scheduling 
+policies. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">bqueues</font></code> command displays the status of available queues and their configuration 
+parameters. For a queue to accept and dispatch jobs, the status should be 
+<code><font face="courier" size="3">Open:Active</font></code>. 
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bqueues
+</strong></font></code>
+QUEUE_NAME      PRIO STATUS          MAX JL/U JL/P JL/H NJOBS  PEND   RUN  SUSP 
+owners           43   Open:Active      -    -    -    -     0     0     0     0
+priority         43   Open:Active      -    -    -    -     0     0     0     0
+night            40    Open:Inact      -    -    -    -     0     0     0     0
+chkpnt_rerun_qu  40   Open:Active      -    -    -    -     0     0     0     0
+short            35   Open:Active      -    -    -    -     0     0     0     0
+normal           30   Open:Active      -    -    -    -     0     0     0     0
+idle             20   Open:Active      -    -    -    -     0     0     0     0
+interactive      10   Open:Active      -    -    -    -     0     0     0     0
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The queue information displayed by <code><font face="courier" size="3">bqueues</font></code> is configured in 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code>. Several 
+queues are defined by default in 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code>. Modify 
+this file to add, delete, or change queues. See <a href="lsf_quick_admin.html#1499324">Managing Users, Hosts, and Queues</a> for 
+more information about modifying queues.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1498773"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+bqueues -l
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To see more detailed queue information, use <code><font face="courier" size="3">bqueues -l</font></code>:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bqueues -l normal
+</strong></font></code>
+QUEUE: normal
+  -- For normal low-priority jobs, This is the default queue.
+
+PARAMETERS/STATISTICS
+PRIO NICE STATUS          MAX JL/U JL/P JL/H NJOBS  PEND   RUN SSUSP USUSP  RSV 
+ 30   20  Open:Active       -    -    -    -     8     8     0     0     0    0
+
+ STACKLIMIT MEMLIMIT
+   2048 K     5000 K
+
+SCHEDULING PARAMETERS
+           r15s   r1m  r15m   ut      pg    io   ls    it    tmp    swp    mem
+ loadSched   -     -     -     -       -     -    -     -     -      -      -  
+ loadStop    -     -     -     -       -     -    -     -     -      -      -  
+
+USERS:  all users
+HOSTS:  all hosts used by the LSF Batch system
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">bqueues -l</font></code> shows the following kinds of information about the queue:
+ </font></p>
+
+<ul>
+  <li><a name="1498777"> </a>
+<font face="Helvetica, Arial, sans-serif">
+What kinds of jobs are meant to run on the queue
+</font>
+  <li><a name="1498778"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Resource usage limits
+</font>
+  <li><a name="1498779"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Hosts and users able to use the queue
+</font>
+  <li><a name="1498780"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Scheduling threshold values:
+</font>
+  <ul>
+    <li><a name="1498781"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">loadSched</font></code> is the threshold for LSF to stop dispatching jobs automatically
+</font>
+    <li><a name="1498782"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">loadStop</font></code> is the threshold for LSF to suspend a job automatically
+</font>
+  </ul>
+</ul>
+<div>
+<h4>
+  <a name="1498788"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Other useful commands
+</font>
+</h4>
+</div>
+<ul>
+  <li><a name="1498789"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">bparams</font></code> command displays information about the LSF Batch configuration parameters.
+</font>
+  <li><a name="1498790"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">bhist</font></code> command displays historical information about jobs.
+</font>
+</ul>
+
+
+
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1498803"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Running LSF Jobs
+</font>
+</h2>
+
+<ul>
+  <li><a name="1498807"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498831">Commands for running LSF jobs (lsrun and bsub)</a>
+</font>
+  <li><a name="1498811"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498851">Submit batch jobs (bsub)</a>
+</font>
+  <li><a name="1498815"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498872">Display job status (bjobs)</a>
+</font>
+  <li><a name="1498819"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1583093">Control job execution (bstop, bresume, bkill)</a>
+</font>
+  <li><a name="1498823"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498898">Run interactive tasks (lsrun and lsgrun)</a>
+</font>
+  <li><a name="1498827"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1498914">Integrate your applications with LSF</a>
+</font>
+</ul>
+
+<h3>
+  <a name="1498831"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Commands for running LSF jobs (lsrun and bsub)
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+You use two basic commands to run jobs through LSF:
+ </font></p>
+
+<ul>
+  <li><a name="1498834"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">bsub</font></code> submits jobs to LSF Batch. LSF schedules and dispatches jobs to the best available host based on the scheduling policies you configure in your LSF queues.
+</font>
+  <li><a name="1498836"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">lsrun</font></code> runs an interactive task on the best available host, based on current system load information gathered by <code><font face="courier" size="3">lim</font></code>.
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+For most jobs, all you need to do is add either <code><font face="courier" size="3">lsrun</font></code> or <code><font face="courier" size="3">bsub</font></code> in front of the job 
+commands you normally use; there is usually no need to modify job executables or 
+execution scripts.
+ </font></p>
+
+
+
+
+<h3>
+  <a name="1498851"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Submit batch jobs (bsub)
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1498852"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+bsub
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">bsub</font></code> command submits jobs to LSF queues. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The following command submits a <code><font face="courier" size="3">sleep</font></code> job to the default queue (<code><font face="courier" size="3">normal</font></code>):
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bsub sleep 60
+</strong></font></code>Job &lt;3616&gt; is submitted to default queue &lt;normal&gt;.
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+When a job is submitted to LSF, it is assigned a unique job ID, in this case <code><font face="courier" size="3">3616</font></code>.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+You can specify a wide range of job options on the <code><font face="courier" size="3">bsub</font></code> command. For example, you 
+can specify a queue, and the job command <code><font face="courier" size="3">sleep</font></code> is the last option:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bsub -q short sleep 60
+</strong></font></code>Job &lt;3628&gt; is submitted to queue &lt;short&gt;.
+</pre>
+</font><div>
+<h4>
+  <a name="1498859"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+What LSF does with job output
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+By default, when the job is finished, LSF sends email with a job report and any output 
+and error messages to the user account from which the job was submitted. You can 
+optionally save standard output and standard error to files with the <code><font face="courier" size="3">-o</font></code> and <code><font face="courier" size="3">-e</font></code> options:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bsub -q short -o /home/user1/jobs/output.%J -e /home/user1/jobs/errors.%J ls -l
+</strong></font></code>Job &lt;3640&gt; is submitted to queue &lt;short&gt;.
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+This command appends the standard output and standard error of the job to the files 
+<code><font face="courier" size="3">output.3640</font></code> and <code><font face="courier" size="3">errors.3640</font></code> in the <code><font face="courier" size="3">jobs</font></code> subdirectory of the home directory of 
+<code><font face="courier" size="3">user1</font></code>. The <code><font face="courier" size="3">%J </font></code>variable in the command line is replaced by the job ID when the files 
+are created, which helps keep track of job output when you run a lot of jobs. 
+ </font></p>
+
+<div>
+<h4>
+  <a name="1498865"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Interactive batch jobs (bsub -I)
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To submit an interactive job through LSF, use the <code><font face="courier" size="3">-I</font></code> option:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bsub -I ls
+</strong></font></code></pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Submits a batch interactive job that displays the output of the <code><font face="courier" size="3">ls</font></code> command.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To submit a batch interactive job by using a pseudo-terminal, use the <code><font face="courier" size="3">bsub -Ip</font></code> option. 
+To submit a batch interactive job and create a pseudo-terminal with shell mode support, 
+use the <code><font face="courier" size="3">bsub -Is</font></code> option.
+ </font></p>
+
+
+<h3>
+  <a name="1498872"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Display job status (bjobs)
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The status of each LSF job is updated periodically, and you can use the job ID to 
+monitor and manipulate the job status.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1498874"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+bjobs
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">bjobs</font></code> command displays the job ID and other job status. For example:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bjobs
+</strong></font></code>JOBID&nbsp;USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STAT  QUEUE      FROM_HOST   EXEC_HOST   JOB_NAME    SUBMIT_TIME
+1266&nbsp;&nbsp;user1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RUN   normal     hosta       hostb       sleep 60    Jun 5&nbsp;17:39:58
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If all hosts are busy, the job is not started immediately and the <code><font face="courier" size="3">STAT</font></code> column says <code><font face="courier" size="3">PEND</font></code>. 
+The job <code><font face="courier" size="3">sleep 60</font></code> should take 60 seconds to run. When the job completes, LSF sends 
+email reporting the job completion.
+ </font></p>
+
+
+<h3>
+  <a name="1583093"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Control job execution (bstop, bresume, bkill)
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1583094"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+bstop
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To suspend a running job, use the <code><font face="courier" size="3">bstop</font></code> command and specify the job ID:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bstop 1266
+</strong></font></code>Job &lt;1266&gt; is being stopped
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If the job was running when it was stopped, the <code><font face="courier" size="3">bjobs</font></code> command shows USUSP status 
+for job <code><font face="courier" size="3">1266</font></code>:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bjobs
+</strong></font></code>JOBID&nbsp;USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STAT  QUEUE      FROM_HOST   EXEC_HOST   JOB_NAME    SUBMIT_TIME
+1266&nbsp;&nbsp;user1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USUSP normal     hosta       hostb       sleep 60    Jun 5&nbsp;17:39:58
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Job owners can only suspend their own jobs. LSF administrators can suspend any job.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1498887"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+bresume
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To resume a suspended job, use the <code><font face="courier" size="3">bresume</font></code> command.
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bresume 1266
+</strong></font></code>Job &lt;1266&gt; is being resumed
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If the job resumes immediately. the <code><font face="courier" size="3">bjobs</font></code> command shows RUN status for job <code><font face="courier" size="3">1266</font></code>:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bjobs
+</strong></font></code>JOBID&nbsp;USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STAT  QUEUE      FROM_HOST   EXEC_HOST   JOB_NAME    SUBMIT_TIME
+1266&nbsp;&nbsp;user1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RUN   normal     hosta       hostb       sleep 60    Jun 5&nbsp;17:39:58
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Job owners can only resume their own jobs. LSF administrators can resume any job.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1498893"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+bkill
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To kill a job, use the <code><font face="courier" size="3">bkill</font></code> command, which sends a signal to the specified jobs. For 
+example, if the job owner or the LSF administrator runs the following command, job 
+<code><font face="courier" size="3">1266</font></code> is killed:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bkill 1266
+</strong></font></code>Job &lt;1266&gt; is being terminated
+</pre>
+</font>
+<h3>
+  <a name="1498898"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Run interactive tasks (lsrun and lsgrun)
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1498899"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsrun
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">lsrun</font></code> command runs a task on either the current local host or remotely on the 
+best available host, provided it can find the necessary resources and the appropriate host 
+type.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+For example, the following command runs the UNIX <code><font face="courier" size="3">ls</font></code> command. In this case, the 
+command ran through LSF on the local host:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>lsrun ls -l /usr/share/lsf/conf
+</strong></font></code>total 742
+-rw-r--r--   1 root     lsf        11372 Jul 16 16:23 cshrc.lsf
+-rw-r--r--   1 root     lsf          365 Oct 25 10:55 hosts
+drwxr-xr-x   3 lsfadmin lsf          512 Jul 16 15:53 lsbatch
+-rw-r--r--   1 lsfadmin lsf         1776 Nov 23 15:13 lsf.conf
+-rw-r--r--   1 lsfadmin lsf         8453 Nov 16 17:46 lsf.shared
+-rw-r--r--   1 lsfadmin lsf          578 Jul 16 15:53 lsf.task
+-rw-r--r--   1 root     lsf        10485 Jul 16 17:08 profile.lsf
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+You can also specify a host where you want to run a command. For example, the 
+following command runs the UNIX <code><font face="courier" size="3">hostname</font></code> command on the remote host <code><font face="courier" size="3">hosta</font></code>:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>lsrun -v -m hosta hostname
+</strong></font></code>&lt;&lt;Execute hostname on remote host hosta&gt;&gt;
+hosta
+</pre>
+</font><div>
+<h4>
+  <a name="1498909"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+lsgrun
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">lsgrun</font></code> command is similar to <code><font face="courier" size="3">lsrun</font></code>, but it runs a task on a group of hosts. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+For example, the following command runs the UNIX <code><font face="courier" size="3">hostname</font></code> command on three 
+remote hosts:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>lsgrun -v -m "hosta hostb hostc" hostname
+</strong></font></code>&lt;&lt;Executing hostname on hosta&gt;&gt;
+hosta
+&lt;&lt;Executing hostname on hostb&gt;&gt;
+hostb
+&lt;&lt;Executing hostname on hostc&gt;&gt;
+hostc
+</pre>
+</font>
+<h3>
+  <a name="1498914"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Integrate your applications with LSF
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+By integrating your applications with LSF, you can assure your users correct and 
+complete job submission and execution without requiring them to learn LSF commands. 
+There are three basic ways to integrate applications with LSF:
+ </font></p>
+
+<ul>
+  <li><a name="1498916"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Wrapper shell scripts
+</font>
+  <li><a name="1498917"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Wrapper binary executables
+</font>
+  <li><a name="1498918"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Modifying existing application source code and interfaces
+</font>
+</ul>
+<div>
+<h4>
+  <a name="1498919"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Wrapper shell scripts
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The easiest integration method is to put the <code><font face="courier" size="3">bsub</font></code> command into an executable file like 
+a shell script. A <em>wrapper script</em> is an executable file for launching your application 
+through LSF. It gives users a simple interface to run their jobs that is easy to deploy and 
+maintain. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+For example, if your application is called <code><font face="courier" size="3">abc</font></code>, rename <code><font face="courier" size="3">abc</font></code> to <code><font face="courier" size="3">abc_real</font></code> and create a 
+wrapper script called <code><font face="courier" size="3">abc</font></code>, like this:
+ </font></p>
+
+<font size="3">
+<pre>
+#! /bin/sh
+bsub -R "rusage[abc_res=1:duration=1]" abc_real
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+When users run <code><font face="courier" size="3">abc</font></code>, they are actually running a script to submit a job <code><font face="courier" size="3">abc_real</font></code> to 
+LSF using 1 shared resource named <code><font face="courier" size="3">abc_res</font></code>. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+By adding appropriate options to the script, you can enhance your integration to:
+ </font></p>
+
+<ul>
+  <li><a name="1498929"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Requeue jobs based on resource availability
+</font>
+  <li><a name="1498930"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Copy input and output files to and from the local directory on the execution host
+</font>
+  <li><a name="1498931"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Calculate and estimate resource requirements
+</font>
+</ul>
+<div>
+<h4>
+  <a name="1498932"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Wrapper binary programs
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+A <em>wrapper binary </em>is similar to a wrapper shell script in the form of a compiled binary 
+executable. Compiled wrapper binaries usually run faster and more efficiently than shell 
+scripts, and they also have access to the LSF API (LSLIB and LSBLIB). Binary code is 
+also more secure because users cannot modify it without the source code and 
+appropriate libraries, but it is more time consuming to develop wrapper binary programs 
+than wrapper shell scripts.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1498934"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Modifying existing application source code and interfaces
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF is already integrated closely with many commonly used software products. IBM 
+and other software application vendors provide facilities and services for closer 
+integration of LSF and other applications. By modifying existing application user 
+interfaces, you can enable easy job submission, parallel execution, 
+and other advanced LSF features. In some cases, you are able to run an LSF job directly 
+from the application user interface.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+We can work with you to discuss your specific application integration requirements. 
+Contact your application vendor or IBM for more information.
+ </font></p>
+
+
+
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1499313"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Managing Your Cluster
+</font>
+</h2>
+
+<div>
+<h4>
+  <a name="1499314"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Contents
+</font>
+</h4>
+</div>
+<ul>
+  <li><a name="1499317"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499324">Managing Users, Hosts, and Queues</a>
+</font>
+  <li><a name="1499321"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499644">Configuring LSF Startup</a>
+</font>
+</ul>
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1499324"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Managing Users, Hosts, and Queues
+</font>
+</h2>
+
+<ul>
+  <li><a name="1499328"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499347">Make your cluster available to users (cshrc.lsf and profile.lsf)</a>
+</font>
+  <li><a name="1499332"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499380">Add a host to your cluster</a>
+</font>
+  <li><a name="1499336"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499510">Remove a host from your cluster</a>
+</font>
+  <li><a name="1499340"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499560">Add a queue</a>
+</font>
+  <li><a name="1499344"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499599">Remove a queue</a>
+</font>
+</ul>
+
+<h3>
+  <a name="1499347"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Make your cluster available to users (cshrc.lsf and profile.lsf)
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To set up the LSF environment for your users, use the following two shell files:
+ </font></p>
+
+<ul>
+  <li><a name="1499351"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/cshrc.lsf</font></code> (for <code><font face="courier" size="3">csh</font></code>, <code><font face="courier" size="3">tcsh</font></code>)
+</font>
+  <li><a name="1499352"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/profile.lsf</font></code> (for <code><font face="courier" size="3">sh</font></code>, <code><font face="courier" size="3">ksh</font></code>, or <code><font face="courier" size="3">bash</font></code>)
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Make sure all LSF users include one of these files at the end of their own <code><font face="courier" size="3">.cshrc</font></code> or 
+<code><font face="courier" size="3">.profile</font></code> file, or run one of these two files before using LSF.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1499354"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+For csh or tcsh
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Add <code><font face="courier" size="3">/usr/share/lsf/conf/cshrc.lsf</font></code> to the end of the <code><font face="courier" size="3">.cshrc</font></code> file for all users:
+ </font></p>
+
+<ul>
+  <li><a name="1499356"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Copy the <code><font face="courier" size="3">/usr/share/lsf/conf/cshrc.lsf</font></code> file into <code><font face="courier" size="3">.cshrc</font></code>
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+OR
+ </font></p>
+
+<ul>
+  <li><a name="1499360"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Add a line similar to the following to the end of <code><font face="courier" size="3">.cshrc</font></code>:
+</font>
+<font size="3">
+<pre>
+source <code><font face="courier" size="3">/usr/share/lsf/conf/cshrc.lsf
+</font></code></pre>
+</font>
+</ul>
+<div>
+<h4>
+  <a name="1499366"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+For sh, ksh, or bash
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Add <code><font face="courier" size="3">/usr/share/lsf/conf/profile.lsf</font></code> to the end of the <code><font face="courier" size="3">.profile</font></code> file for all users:
+ </font></p>
+
+<ul>
+  <li><a name="1546111"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Copy the <code><font face="courier" size="3">/usr/share/lsf/conf/profile.lsf</font></code> file into <code><font face="courier" size="3">.profile</font></code>
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+OR
+ </font></p>
+
+<ul>
+  <li><a name="1499372"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Add a line similar to following to the end of <code><font face="courier" size="3">.profile</font></code>:
+</font>
+<font size="3">
+<pre>
+. <code><font face="courier" size="3">/usr/share/lsf/conf/profile.lsf
+</font></code></pre>
+</font>
+</ul>
+
+<h3>
+  <a name="1499380"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Add a host to your cluster
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1499381"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Task summary
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Adding a host to your cluster has the following major steps:
+ </font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1499383"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Install LSF binaries for the host type.
+</font>
+  <li value="2	"><a name="1499384"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Add host Information to <code><font face="courier" size="3">lsf.cluster.labkdd</font></code>.
+</font>
+  <li value="3	"><a name="1499386"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Set up the new host.
+</font>
+</ol>
+<div>
+<h4>
+  <a name="1499387"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Before you start
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Make sure you have the LSF distribution files for the host types you want to add. For 
+example, to add a Sun SPARC system running 64-bit Solaris 10 to your cluster, 
+get the file <code><font face="courier" size="3">lsf10.1_sparc-sol10-64.tar.Z</font></code>.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Distribution tar files for all supported LSF releases are available for download through 
+the Online Support Web site or the FTP site.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Access to the download area of the Web site and the FTP site is 
+controlled by login name and password. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+See the Product Support site for a complete list of supported platforms</font>.
+ </p>
+
+<div>
+<h4>
+  <a name="1499398"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+1 Install LSF binaries for a new host type
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">/usr/share/lsf/10.1/install/lsfinstall</font></code> to add new host types 
+to your cluster. You can skip these steps if you already have the executables
+ </font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1499400"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on as <code><font face="courier" size="3">root</font></code> to any host that can access the LSF install script directory <code><font face="courier" size="3">/usr/share/lsf/10.1/install/</font></code>.
+</font>
+  <li value="2	"><a name="1499401"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Change to the LSF install script directory.
+</font>
+<font size="3">
+<pre>
+<code><font face="courier" size="3"># </font></code><code><font face="courier" size="3"><strong>cd /usr/share/lsf/10.1/install
+</strong></font></code></pre>
+</font>
+  <li value="3	"><a name="1499411"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Edit <code><font face="courier" size="3">/usr/share/lsf/10.1/install/</font></code><code><font face="courier" size="3">install.config</font></code> to specify desired options for new host types.
+</font>
+
+
+
+
+
+  <li value="4	"><a name="1499423"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Run <code><font face="courier" size="3">./lsfinstall&nbsp;-f&nbsp;</font></code><code><font face="courier" size="3">install.config</font></code>.
+</font>
+  <li value="5	"><a name="1499426"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Follow the steps for host setup in "Completing Your IBM Spectrum LSF Installation"   
+(<code><font face="courier" size="3">/home/bayudwiyansatria/lsfsce10.2.0.6-x86_64/lsf/lsf10.1_lsfinstall/lsf_getting_started.html</font></code>) 
+to set up the new hosts.
+</font>
+</ol>
+
+<h4>
+  <a name="1499430"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+2 Add host Information to lsf.cluster.labkdd
+</font>
+</h4>
+
+<ol type="1">
+  <li value="1	"><a name="1499435"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on to the LSF master host blade1-node as the primary LSF administrator lsfadmin.
+</font>
+  <li value="2	"><a name="1499437"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Edit <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code>, and add host information for the new host to the <code><font face="courier" size="3">Host</font></code> section: 
+</font>
+  <ul>
+    <li><a name="1499439"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Add model or type.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you enter the <code><font face="courier" size="3">!</font></code> keyword in the <code><font face="courier" size="3">model</font></code> and <code><font face="courier" size="3">type</font></code> columns, the host model is 
+automatically detected by <code><font face="courier" size="3">lim</font></code> running on the host.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+You may want to use the default values for that host type now, and change them 
+later on when you have more experience or more information. This can be done 
+without interrupting LSF service.
+ </font></p>
+
+    <li><a name="1499442"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Specify LSF server or client in the <code><font face="courier" size="3">server</font></code> column:
+</font>
+    <ul>
+      <li><a name="1499443"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">1</font></code> (one) indicates an LSF server host
+</font>
+      <li><a name="1499444"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">0</font></code> (zero) indicates an LSF  client-only host
+</font>
+    </ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+By default, all hosts are considered LSF server hosts. 
+ </font></p>
+
+  </ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+For example:
+ </font></p>
+
+<font size="3">
+<pre>
+HOSTNAME&nbsp;&nbsp;model&nbsp;&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server&nbsp;&nbsp;r1m&nbsp;&nbsp;mem&nbsp;&nbsp;RESOURCES&nbsp;&nbsp;REX
+PRI
+hosta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUNSOL6&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+hostb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUNSOL6&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+hostc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HPPA1132&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+hostd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HPPA1164&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+End Host
+</pre>
+</font>
+  <li value="3	"><a name="1499448"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Save the changes to <code><font face="courier" size="3">lsf.cluster.labkdd</font></code>.
+</font>
+  <li value="4	"><a name="1499450"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Reconfigure <code><font face="courier" size="3">lim</font></code> to enable the new host in the cluster:
+</font>
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>lsadmin reconfig
+</strong></font></code>Checking configuration files ...
+No errors found.
+Do you really want to restart LIMs on all hosts? [y/n] <code><font face="courier" size="3"><strong>y
+</strong></font></code>Restart LIM on &lt;hosta&gt; ...... done
+Restart LIM on &lt;hostc&gt; ...... done
+Restart LIM on &lt;hostd&gt; ...... done
+</pre>
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">lsadmin&nbsp;reconfig</font></code> command checks for configuration errors.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If no errors are found, you are asked to confirm that you want to restart <code><font face="courier" size="3">lim</font></code> on all 
+hosts and <code><font face="courier" size="3">lim</font></code> is reconfigured. If fatal errors are found, reconfiguration is aborted.
+ </font></p>
+
+  <li value="5	"><a name="1499455"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Reconfigure <code><font face="courier" size="3">mbatchd</font></code>:
+</font>
+<font size="3">
+<pre>
+%<code><font face="courier" size="3"><strong> badmin reconfig
+</strong></font></code>Checking configuration files ...
+No errors found.
+Do you want to reconfigure? [y/n] <code><font face="courier" size="3"><strong>y
+</strong></font></code>Reconfiguration initiated
+</pre>
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">badmin&nbsp;reconfig</font></code> command checks for configuration errors. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If no fatal errors are found, you are asked to confirm reconfiguration. If fatal errors 
+are found, reconfiguration is aborted.
+ </font></p>
+
+</ol>
+<div>
+<h4>
+  <a name="1499459"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+3 Set up the new host
+</font>
+</h4>
+</div>
+<ol type="1">
+  <li value="1	"><a name="1499460"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on as <code><font face="courier" size="3">root</font></code> to any host that can access the LSF install script directory <code><font face="courier" size="3">/usr/share/lsf/10.1/install/</font></code>.
+</font>
+  <li value="2	"><a name="1499461"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Change to the LSF install script directory.
+</font>
+<font size="3">
+<pre>
+<code><font face="courier" size="3"># </font></code><code><font face="courier" size="3"><strong>cd /usr/share/lsf/10.1/install
+</strong></font></code></pre>
+</font>
+  <li value="3	"><a name="1499471"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Run the <code><font face="courier" size="3">hostsetup</font></code> command to set up the new host.
+</font>
+<font size="3">
+<pre>
+<code><font face="courier" size="3"># </font></code><code><font face="courier" size="3"><strong>./hostsetup --top="/usr/share/lsf"
+</strong></font></code></pre>
+</font>
+
+
+  <li value="4	"><a name="1499487"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Start LSF on the new host:
+</font>
+<font size="3">
+<pre>
+# <code><font face="courier" size="3"><strong>lsadmin limstartup
+</strong></font></code># <code><font face="courier" size="3"><strong>lsadmin resstartup
+</strong></font></code># <code><font face="courier" size="3"><strong>badmin hstartup
+</strong></font></code></pre>
+</font>
+</ol>
+<div>
+<h4>
+  <a name="1541430"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Adding hosts dynamically
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Dynamic host configuration allows you to add hosts to the cluster without manually 
+changing the LSF configuration. 
+ </font></p>
+
+<div>
+
+
+<h3>
+  <a name="1499510"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Remove a host from your cluster
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1499511"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+CAUTION
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif"><b>
+Never remove the master host from LSF. If you want to remove your current 
+default master from LSF, change <code><font face="courier" size="3">lsf.cluster.</font></code><em>cluster_name</em> to assign a 
+different default master host. Then remove the host that was once the 
+master host.
+ </b></font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1499513"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on to the host as <code><font face="courier" size="3">root</font></code> or the primary LSF administrator lsfadmin.
+</font>
+  <li value="2	"><a name="1499514"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Run <code><font face="courier" size="3">badmin hclose</font></code> to close the host. This prevents jobs from being dispatched to the host and allows running jobs to finish. 
+</font>
+  <li value="3	"><a name="1499515"> </a>
+<font face="Helvetica, Arial, sans-serif">
+When all dispatched jobs are finished, run <code><font face="courier" size="3">lsfshutdown</font></code> to stop the LSF daemons on the host to be removed.
+</font>
+  <li value="4	"><a name="1499516"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Edit <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code> and remove the host from the <code><font face="courier" size="3">Host</font></code> section.
+</font>
+  <li value="5	"><a name="1499518"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Remove any other references to the host, if applicable, from the following LSF configuration files: 
+</font>
+  <ul>
+    <li><a name="1499519"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.shared</font></code>
+</font>
+    <li><a name="1499520"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.hosts</font></code>
+</font>
+    <li><a name="1499521"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues </font></code>
+</font>
+    <li><a name="1499522"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.resources</font></code>
+</font>
+  </ul>
+  <li value="6	"><a name="1499522"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log off the host to be removed, and log on as <code><font face="courier" size="3">root</font></code> or the primary LSF administrator lsfadmin to any other host in the cluster.
+</font>
+  <li value="7	"><a name="1499523"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Reconfigure <code><font face="courier" size="3">lim</font></code>:
+</font>
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>lsadmin reconfig
+</strong></font></code>Checking configuration files ...
+No errors found.
+Do you really want to restart LIMs on all hosts? [y/n] <code><font face="courier" size="3"><strong>y
+</strong></font></code>Restart LIM on &lt;hosta&gt; ...... done
+Restart LIM on &lt;hostc&gt; ...... done
+</pre>
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">lsadmin&nbsp;reconfig</font></code> command checks for configuration errors.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If no errors are found, you are asked to confirm that you want to restart <code><font face="courier" size="3">lim</font></code> on all 
+hosts and <code><font face="courier" size="3">lim</font></code> is reconfigured. If fatal errors are found, reconfiguration is aborted.
+ </font></p>
+
+  <li value="8	"><a name="1499528"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Reconfigure <code><font face="courier" size="3">mbatchd</font></code>:
+</font>
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>badmin reconfig
+</strong></font></code>Checking configuration files ...
+No errors found.
+Do you want to reconfigure? [y/n] <code><font face="courier" size="3"><strong>y
+</strong></font></code>Reconfiguration initiated
+</pre>
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">badmin&nbsp;reconfig</font></code> command checks for configuration errors. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If no fatal errors are found, you are asked to confirm reconfiguration. If fatal errors 
+are found, reconfiguration is aborted.
+ </font></p>
+
+  <li value="9	"><a name="1499532"> </a>
+<font face="Helvetica, Arial, sans-serif">
+If you configured LSF daemons to start automatically as system startup, remove the LSF section from the host's system startup files. See <a href="lsf_quick_admin.html#1499680">Set up automatic LSF startup</a> for details.
+</font>
+</ol>
+<div>
+<h4>
+  <a name="1541448"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Removing hosts dynamically
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Dynamic host configuration allows you to remove hosts from the cluster without 
+manually changing the LSF configuration. 
+ </font></p>
+
+<div>
+
+
+
+<h3>
+  <a name="1499560"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Add a queue
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Adding a queue does not affect pending or running jobs.
+ </font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1499564"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on as the LSF administrator lsfadmin to any host in the cluster.
+</font>
+  <li value="2	"><a name="1499566"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Edit <code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code> to add the new queue definition.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+You can copy another queue definition from this file as a starting point; remember 
+to change the <code><font face="courier" size="3">QUEUE_NAME</font></code> of the copied queue.
+ </font></p>
+
+
+
+  <li value="3	"><a name="1499573"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Save the changes to <code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code>.
+</font>
+  <li value="4	"><a name="1499574"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use the command <code><font face="courier" size="3">badmin&nbsp;ckconfig</font></code> to check the new queue definition.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If any errors are reported, fix the problem and check the configuration again.
+ </font></p>
+
+  <li value="5	"><a name="1499576"> </a>
+<font face="Helvetica, Arial, sans-serif">
+When the configuration files are ready, reconfigure the cluster:
+</font>
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>badmin reconfig
+</strong></font></code>Checking configuration files ...
+No errors found.
+Do you want to reconfigure? [y/n] <code><font face="courier" size="3"><strong>y
+</strong></font></code>Reconfiguration initiated
+</pre>
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">badmin&nbsp;reconfig</font></code> command checks for configuration errors. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If no fatal errors are found, you are asked to confirm reconfiguration. If fatal errors 
+are found, reconfiguration is aborted.
+ </font></p>
+
+</ol>
+<div>
+
+
+<h3>
+  <a name="1499599"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Remove a queue
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1499600"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+View list of existing queues
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Before removing a queue, make sure there are no jobs in that queue.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Use the <code><font face="courier" size="3">bqueues</font></code> command to view a list of existing queues.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If there are jobs in the queue, you must move pending and running jobs to another 
+queue, then remove the queue.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you remove a queue that has pending jobs in it, the jobs are temporarily moved to a 
+<code><font face="courier" size="3">lost and found</font></code> queue. The job state does not change. Running jobs continue, and 
+jobs pending in the original queue are pending in the <code><font face="courier" size="3">lost and found</font></code> queue, and 
+remain pending until the user or the LSF administrator lsfadmin uses the 
+<code><font face="courier" size="3">bswitch</font></code> command to switch the jobs into regular queues. Jobs in other queues are not 
+affected.
+ </font></p>
+
+<div>
+<h4>
+  <a name="1499609"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Steps
+</font>
+</h4>
+</div>
+<ol type="1">
+  <li value="1	"><a name="1499612"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on to any host in the cluster as primary LSF administrator lsfadmin.
+</font>
+  <li value="2	"><a name="1499614"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Close the queue to prevent any new jobs from being submitted:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+For example:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>badmin qclose night
+</strong></font></code>Queue &lt;night&gt; is closed
+</pre>
+</font>
+  <li value="3	"><a name="1499617"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Move all pending and running jobs into another queue.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+For example, the <code><font face="courier" size="3">bswitch&nbsp;-q&nbsp;night</font></code> command below chooses jobs from the 
+<code><font face="courier" size="3">night</font></code> queue, and the job ID number <code><font face="courier" size="3">0</font></code> specifies that all jobs should be switched 
+(job ID of <code><font face="courier" size="3">0</font></code> matches all jobs):
+ </font></p>
+
+<font size="3">
+<pre>
+%&nbsp;<code><font face="courier" size="3"><strong>bjobs&nbsp;-u&nbsp;all&nbsp;-q&nbsp;night
+</strong></font></code>JOBID&nbsp;USER&nbsp;&nbsp;STAT&nbsp;&nbsp;QUEUE&nbsp;FROM_HOST&nbsp;&nbsp;&nbsp;EXEC_HOST&nbsp;&nbsp;&nbsp;JOB_NAME&nbsp;&nbsp;&nbsp;SUBMIT_TIME
+5308&nbsp;&nbsp;user5&nbsp;&nbsp;RUN&nbsp;&nbsp;&nbsp;night&nbsp;&nbsp;&nbsp;&nbsp;hosta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hostd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;job5&nbsp;&nbsp;Nov&nbsp;21&nbsp;18:16
+5310&nbsp;&nbsp;user5&nbsp;PEND&nbsp;&nbsp;&nbsp;night&nbsp;&nbsp;&nbsp;&nbsp;hosta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hostc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;job10&nbsp;&nbsp;Nov&nbsp;21&nbsp;18:17
+
+% <code><font face="courier" size="3"><strong>bswitch&nbsp;-q night idle 0
+</strong></font></code>Job &lt;5308&gt; is switched to queue &lt;idle&gt;
+Job &lt;5310&gt; is switched to queue &lt;idle&gt;
+</pre>
+</font>
+  <li value="4	"><a name="1499620"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Edit <code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code> and remove or comment out the definition for the queue being removed.
+</font>
+  <li value="5	"><a name="1499621"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Save the changes to <code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code>.
+</font>
+  <li value="6	"><a name="1499622"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Reconfigure the cluster:
+</font>
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>badmin reconfig
+</strong></font></code>Checking configuration files ...
+No errors found.
+Do you want to reconfigure? [y/n] <code><font face="courier" size="3"><strong>y
+</strong></font></code>Reconfiguration initiated
+</pre>
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The <code><font face="courier" size="3">badmin&nbsp;reconfig</font></code> command checks for configuration errors. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If no fatal errors are found, you are asked to confirm reconfiguration. If fatal errors 
+are found, reconfiguration is aborted.
+ </font></p>
+
+</ol>
+<div>
+
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1499644"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Configuring LSF Startup
+</font>
+</h2>
+
+<ul>
+  <li><a name="1499648"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499656">Allow LSF administrators to start LSF daemons (lsf.sudoers)</a>
+</font>
+  <li><a name="1499652"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1499680">Set up automatic LSF startup</a>
+</font>
+</ul>
+
+<h3>
+  <a name="1499656"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Allow LSF administrators to start LSF daemons (lsf.sudoers)
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To allow LSF administrators (lsfadmin bayudwiyansatria) to start and stop LSF daemons, you 
+should configure the <code><font face="courier" size="3">/etc/lsf.sudoers</font></code> file. If <code><font face="courier" size="3">lsf.sudoers</font></code> does not exist, only 
+<code><font face="courier" size="3">root</font></code> can start and stop LSF daemons.
+ </font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1499658"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Log on as <code><font face="courier" size="3">root</font></code> to each LSF server host ( blade1-node blade2-node).
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Start with the LSF master host blade1-node, and repeat these steps on all 
+LSF hosts.
+ </font></p>
+
+  <li value="2	"><a name="1499660"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Create <code><font face="courier" size="3">/etc/lsf.sudoers</font></code> on each LSF host and specify the LSF_STARTUP_USERS and LSF_STARTUP_PATH parameters. For example:
+</font>
+<font size="3">
+<pre>
+LSF_STARTUP_USERS="lsfadmin bayudwiyansatria"
+LSF_STARTUP_PATH=/usr/share/lsf/10.1/sparc-sol10/etc
+</pre>
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF_STARTUP_PATH is normally LSF_SERVERDIR, where the LSF server 
+binaries (<code><font face="courier" size="3">lim</font></code>, <code><font face="courier" size="3">res</font></code>, <code><font face="courier" size="3">sbatchd</font></code>, <code><font face="courier" size="3">mbatchd</font></code>, <code><font face="courier" size="3">mbschd</font></code>, etc.) are installed, as defined in 
+your <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code> file.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">lsf.sudoers</font></code> must have file permission mode <code><font face="courier" size="3">-rw-------</font></code> (600) and be 
+readable and writable only by <code><font face="courier" size="3">root</font></code>:
+ </font></p>
+
+<font size="3">
+</font><pre><font size="3">
+# <code><font face="courier"><strong>ls -la /etc/lsf.sudoers
+</strong></font></code>-rw-------   1 root     lsf           95 Nov 22 13:57  lsf.sudoers
+</font></pre>
+
+  <li value="3	"><a name="1499676"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Run <code><font face="courier" size="3">lsfrestart</font></code> to restart the cluster:
+</font>
+<font size="3">
+<pre>
+# <code><font face="courier" size="3"><strong>lsfrestart
+</strong></font></code></pre>
+</font>
+</ol>
+
+<h3>
+  <a name="1499680"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Set up automatic LSF startup
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Use the <code><font face="courier" size="3">boot=y</font></code> option of <code><font face="courier" size="3">hostsetup</font></code> to configure LSF daemons to start 
+automatically on every LSF server host in the cluster <code><font face="courier" size="3">labkdd</font></code>.
+ </font></p>
+
+
+
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+
+
+
+
+
+
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1522120"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Troubleshooting LSF Problems
+</font>
+</h2>
+
+<div>
+<h4>
+  <a name="1522123"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Contents
+</font>
+</h4>
+</div>
+<ul>
+  <li><a name="1522127"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1501329">Common LSF Problems</a>
+</font>
+  <li><a name="1501326"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1502039">Get Technical Support</a>
+</font>
+</ul>
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1501329"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Common LSF Problems
+</font>
+</h2>
+
+<ul>
+  <li><a name="1501333"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1501349">Finding LSF error logs</a>
+</font>
+  <li><a name="1501337"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1501365">For most LSF problems</a>
+</font>
+  <li><a name="1501341"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<a href="lsf_quick_admin.html#1501402">Top 10 LSF problems</a>
+</font>
+</ul>
+
+<h3>
+  <a name="1501349"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Finding LSF error logs
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+When something goes wrong, LSF server daemons log error messages in the LSF log 
+directory (/usr/share/lsf/log).
+ </font></p>
+
+<div>
+<h4>
+  <a name="1541408"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Who owns and who should write to this directory
+</font>
+</h4>
+</div>
+
+<p>
+<hr>
+<font face="Helvetica, Arial, sans-serif">
+Make sure that the primary LSF administrator (lsfadmin) owns /usr/share/lsf/log, 
+and that <code><font face="courier" size="3">root</font></code> can write to this directory. If an LSF server is unable to write to 
+/usr/share/lsf/log, then the error logs are created in <code><font face="courier" size="3">/tmp</font></code>.
+ </font><hr>
+</p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF logs to the following files
+ </font></p>
+
+<ul>
+  <li><a name="1501354"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/vemkd.log.</font></code><code><font face="courier" size="3">blade1-node</font></code> </font>  
+  <li><a name="1501354"> </a> <font face="Helvetica, Arial, sans-serif"> <code><font face="courier" size="3">/usr/share/lsf/log/lim.log.</font></code><em>host_name</em> </font>
+  <li><a name="1501355"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/res.log.</font></code><em>host_name</em>
+</font>
+  <li><a name="1501356"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/pim.log.</font></code><em>host_name</em>
+</font>
+  <li><a name="1501357"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/</font></code><code><font face="courier" size="3">mbatchd</font></code><code><font face="courier" size="3">.log.blade1-node</font></code>
+</font>
+  <li><a name="1501359"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/mbschd.log.blade1-node</font></code>
+</font>
+  <li><a name="1501361"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/log/sbatchd.log.</font></code><em>host_name</em>
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If there are any error messages in the log files that you do not understand, contact your 
+LSF system engineer.
+ </font></p>
+
+
+<h3>
+  <a name="1501365"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+For most LSF problems
+</font>
+</h3>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The general troubleshooting steps for most LSF problems are:
+ </font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1501367"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Run <code><font face="courier" size="3">lsadmin&nbsp;ckconfig&nbsp;-v</font></code> and note any errors shown in the command output.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Look for the error in <a href="lsf_quick_admin.html#1501402">Top 10 LSF problems</a>. If none of these applies to your 
+situation, contact Product Support.
+ </font></p>
+
+  <li value="2	"><a name="1501373"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use the following commands to restart the LSF cluster:
+</font>
+<font size="3">
+<pre>
+# <code><font face="courier" size="3"><strong>lsadmin limrestart all
+</strong></font></code># <code><font face="courier" size="3"><strong>lsadmin resrestart all
+</strong></font></code># <code><font face="courier" size="3"><strong>badmin hrestart all
+</strong></font></code></pre>
+</font>
+  <li value="3	"><a name="1501377"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Run <code><font face="courier" size="3">ps -ef</font></code> to see if the LSF daemons are running.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Look for the processes similar to the following:
+ </font></p>
+
+<font size="3">
+<pre>
+root 17426     1  0   13:30:40 ?    0:00 /usr/share/lsf/10.1/sparc-sol10/etc/lim
+root 17436     1  0   13:31:11 ?    0:00 /usr/share/lsf/10.1/sparc-sol10/etc/sbatchd
+root 17429     1  0   13:30:56 ?    0:00 /usr/share/lsf/10.1/sparc-sol10/etc/res
+
+</pre>
+</font>
+  <li value="4	"><a name="1501399"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Check the LSF error logs on the first few hosts listed in the <code><font face="courier" size="3">Host</font></code> section of <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code>. If LSF_MASTER_LIST is defined in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>, check the error logs on the hosts listed in this parameter instead.
+</font>
+</ol>
+
+<h3>
+  <a name="1501402"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Top 10 LSF problems
+</font>
+</h3>
+
+<div>
+<h4>
+  <a name="1501404"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+1 Cannot open lsf.conf file
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+You might see this message running <code><font face="courier" size="3">lsid</font></code>. This means that 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code> is not accessible to LSF.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+By default, LSF checks the directory defined by LSF_ENVDIR<code><font face="courier" size="3"> </font></code>for <code><font face="courier" size="3">lsf.conf</font></code>. If 
+<code><font face="courier" size="3">lsf.conf</font></code> is not in LSF_ENVDIR, LSF looks for it in<code><font face="courier" size="3">/etc</font></code>.
+ </font></p>
+
+<ul>
+  <li><a name="1501407"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Make sure that there is either a symbolic link from <code><font face="courier" size="3">/etc/lsf.conf</font></code> to <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+or
+ </font></p>
+
+  <li><a name="1501409"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">/usr/share/lsf/conf/csrhc.lsf</font></code> or <code><font face="courier" size="3">/usr/share/lsf/conf/profile.lsf</font></code> to set up your LSF environment. 
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Make sure that <code><font face="courier" size="3">/usr/share/lsf/conf/cshrc.lsf</font></code> or 
+<code><font face="courier" size="3">/usr/share/lsf/conf/profile.lsf</font></code> are available for users to set the LSF 
+environment variables.
+ </font></p>
+
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+See <a href="lsf_quick_admin.html#1498426">Setting up the LSF environment (cshrc.lsf and profile.lsf)</a> for more information.
+ </font></p>
+
+
+
+
+
+<div>
+<h4>
+  <a name="1501507"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+2 LIM unavailable
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Sometimes <code><font face="courier" size="3">lim</font></code> is up, but the <code><font face="courier" size="3">lsload</font></code> command displays one of the following error 
+messages:
+ </font></p>
+
+<ul>
+  <li><a name="1501509"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">lsid: getentitlementinfo() failed: LIM is down; try later</font></code>
+</font>
+  <li><a name="1501510"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">LSF daemon (LIM) not responding ... still trying</font></code>
+</font>
+  <li><a name="1501511"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">ls_limcontrol: Communication time out</font></code>
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If <code><font face="courier" size="3">lim</font></code> has just been started, this is normal; <code><font face="courier" size="3">lim</font></code> needs time to read configuration files 
+and contact <code><font face="courier" size="3">lim</font></code> daemons on other hosts. If <code><font face="courier" size="3">lim</font></code> does not respond within one or two 
+minutes, check the <code><font face="courier" size="3">lim</font></code> error log (<code><font face="courier" size="3">/usr/share/lsf/log/lim.log.</font></code><em>host_name</em>) for the 
+host you are working on.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+When the local <code><font face="courier" size="3">lim</font></code> is running but there is no master <code><font face="courier" size="3">lim</font></code> in the cluster, LSF 
+applications display the following message:
+ </font></p>
+
+<font size="3">
+<pre>
+Cannot locate master LIM now, try later.
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">lim</font></code> problems can have several causes. Check:
+ </font></p>
+
+<ul>
+  <li><a name="1501519"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The host is defined in the configuration files:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The host must be listed in the HOSTNAME column of the Host section in 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd
+</font></code> </font></p>
+
+  <ul>
+    <li><a name="1501522"> </a>
+<font face="Helvetica, Arial, sans-serif">
+If the host is an LSF server:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The value in the SERVER column of the Host section in 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code> must be 1.
+ </font></p>
+
+    <li><a name="1501525"> </a>
+<font face="Helvetica, Arial, sans-serif">
+If the host is an LSF client:
+</font>
+    <ul>
+      <li><a name="1501526"> </a>
+<font face="Helvetica, Arial, sans-serif">
+No LSF daemons should be running on the host
+</font>
+      <li><a name="1501527"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The value in the SERVER column of the Host section in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.cluster.labkdd</font></code> must be 0.
+</font>
+      <li><a name="1501528"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_SERVER_HOSTS variable is set in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>
+</font>
+    </ul>
+  </ul>
+  <li><a name="1501531"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The LSF environment (LSF_ENVDIR) is set properly.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">cshrc.lsf</font></code> or <code><font face="courier" size="3">profile.lsf</font></code> to set the LSF environment on the host.
+ </font></p>
+
+
+
+
+
+
+  <li><a name="1501549"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Ownership of the LSF files and directories.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The primary LSF administrator (lsfadmin) should own all LSF 
+directories and most files. The LSF administration commands <code><font face="courier" size="3">lsadmin</font></code> and 
+<code><font face="courier" size="3">badmin</font></code> must be owned by <code><font face="courier" size="3">root</font></code> and have the file permission mode <code><font face="courier" size="3">-rwsr-xr-
+x</font></code> (user ID bit for the owner is <code><font face="courier" size="3">setuid</font></code>).
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+See problem <a href="lsf_quick_admin.html#1501634">5 lsadmin or badmin fails</a> for more information.
+ </font></p>
+
+  <li><a name="1501555"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The ports for <code><font face="courier" size="3">lim</font></code> and <code><font face="courier" size="3">res</font></code> are not used by any other process, and are set correctly in one of:
+</font>
+  <ul>
+    <li><a name="1501556"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>
+</font>
+    <li><a name="1501557"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/etc/services</font></code>
+</font>
+    <li><a name="1501558"> </a>
+<font face="Helvetica, Arial, sans-serif">
+NIS
+</font>
+  </ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+A common mistake is a typo in port names in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The following ports are defined in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>:
+ </font></p>
+
+  <ul>
+    <li><a name="1501561"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_LIM_PORT=7869
+</font>
+    <li><a name="1501562"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_RES_PORT=6878
+</font>
+    <li><a name="1501563"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSB_MBD_PORT=6881
+</font>
+    <li><a name="1501564"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSB_SBD_PORT=6882
+</font>
+  </ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The port numbers can be any numbers ranging from 1024 to 65535 that are not 
+already used by other services. To make sure that the port numbers you supply are 
+not already used by applications registered in your service database, check 
+<code><font face="courier" size="3">/etc/services</font></code>.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To change the port numbers:
+ </font></p>
+
+  <ol type="a">
+    <li><a name="1501572"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Shut down your cluster.
+</font>
+    <li><a name="1501573"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Edit <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code> </font>
+    <font face="Helvetica, Arial, sans-serif">and <code><font face="courier" size="3">/usr/share/lsf/conf/ego/labkdd/kernel/ego.conf.</font></code></font>
+    <li><a name="1501574"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Restart LSF.
+</font>
+  </ol>
+</ul>
+<div>
+<h4>
+  <a name="1501576"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+3 LSF daemons not responding
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+After starting the LSF daemons, use the <code><font face="courier" size="3">ps</font></code> command to check that LSF is running on 
+all LSF hosts, and <code><font face="courier" size="3">mbatchd</font></code> is running on the master host. <code><font face="courier" size="3">mbatchd</font></code> is started 
+automatically by <code><font face="courier" size="3">sbatchd</font></code> on the master host. You never need to start <code><font face="courier" size="3">mbatchd</font></code> 
+yourself.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Before using any LSF commands, wait a few minutes <code><font face="courier" size="3">lim</font></code> on all hosts to do the 
+following:
+ </font></p>
+
+<ul>
+  <li><a name="1501579"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Contact each other
+</font>
+  <li><a name="1501580"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Select a master host
+</font>
+  <li><a name="1501581"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Exchange initialization information
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Check the daemon error logs. Most common problems are:
+ </font></p>
+
+<ul>
+  <li><a name="1501583"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF service port conflicts:
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Check that the ports for <code><font face="courier" size="3">lim</font></code> and <code><font face="courier" size="3">res</font></code> are not used by any other process, and are set 
+correctly in one of:
+ </font></p>
+
+  <ul>
+    <li><a name="1501585"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>
+</font>
+    <li><a name="1501586"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">/etc/services</font></code>
+</font>
+    <li><a name="1501587"> </a>
+<font face="Helvetica, Arial, sans-serif">
+NIS
+</font>
+  </ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+and are not used by any other process.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+A common mistake is a typo in port names in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The following ports are defined in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>:
+ </font></p>
+
+  <ul>
+    <li><a name="1501591"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_LIM_PORT=7869
+</font>
+    <li><a name="1501592"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF_RES_PORT=6878
+</font>
+    <li><a name="1501593"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSB_MBD_PORT=6881
+</font>
+    <li><a name="1501594"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSB_SBD_PORT=6882
+</font>
+  </ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The port numbers can be any numbers ranging from 1024 to 65535 that are not 
+already used by other services. To make sure that the port numbers you supply are 
+not already used by applications registered in your service database, check 
+<code><font face="courier" size="3">/etc/services</font></code>.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To change the port numbers:
+ </font></p>
+
+  <ol type="a">
+    <li><a name="1501602"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Shut down your cluster.
+</font>
+    <li><a name="1501603"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Edit <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code> </font> <font face="Helvetica, Arial, sans-serif">and <code><font face="courier" size="3">/usr/share/lsf/conf/ego/labkdd/kernel/ego.conf.</font></code></font>
+    <li><a name="1501604"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Start LSF.</font>
+    </ol>
+  
+
+  <li><a name="1501621"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Ownership of the LSF files and directories.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The primary LSF administrator (lsfadmin) should own all LSF 
+directories and most files.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+In particular, <code><font face="courier" size="3">/usr/share/lsf/work</font></code> must be owned and writable by the LSF primary 
+administrator.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The LSF administration commands <code><font face="courier" size="3">lsadmin</font></code> and <code><font face="courier" size="3">badmin</font></code> must be owned by 
+<code><font face="courier" size="3">root</font></code> and have the file permission mode <code><font face="courier" size="3">-rwsr-xr-x</font></code> (user ID bit for the owner 
+is <code><font face="courier" size="3">setuid</font></code>).
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+See problem <a href="lsf_quick_admin.html#1501634">5 lsadmin or badmin fails</a> for more information.
+ </font></p>
+
+</ul>
+<div>
+<h4>
+  <a name="1501634"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+4 lsadmin or badmin fails
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The LSF administration commands <code><font face="courier" size="3">lsadmin</font></code> and <code><font face="courier" size="3">badmin</font></code>, or the <code><font face="courier" size="3">eauth</font></code> executable 
+might give the error messages like:
+ </font></p>
+
+<ul>
+  <li><a name="1501636"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">User permission denied.</font></code>
+</font>
+  <li><a name="1501637"> </a>
+<font face="Helvetica, Arial, sans-serif">
+<code><font face="courier" size="3">Operation not permitted.</font></code>
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Check the following: 
+ </font></p>
+
+<ul>
+  <li><a name="1501639"> </a>
+<font face="Helvetica, Arial, sans-serif">
+If you ran <code><font face="courier" size="3">lsfinstall</font></code> as root, <code><font face="courier" size="3">lsfadmin</font></code>, <code><font face="courier" size="3">badmin</font></code>, and <code><font face="courier" size="3">eauth</font></code> have the file permission mode <code><font face="courier" size="3">-rwsr-xr-x</font></code> (4755) so that the user ID bit for the owner is <code><font face="courier" size="3">setuid</font></code>. However, on the file system where LSF was installed, setuid permission may be turned off. Do one of the following:
+</font>
+  <ul>
+    <li><a name="1501640"> </a>
+<font face="Helvetica, Arial, sans-serif">
+If <code><font face="courier" size="3">lsadmin</font></code>, <code><font face="courier" size="3">badmin</font></code>, and <code><font face="courier" size="3">eauth</font></code> are in a directory shared through NFS, share and mount the LSF_TOP directory with <code><font face="courier" size="3">setuid</font></code> enabled. <em>Do not</em> mount with the <code><font face="courier" size="3">nosuid</font></code> flag. 
+</font>
+    <li><a name="1501641"> </a>
+<font face="Helvetica, Arial, sans-serif">
+If your site does not permit this, you must copy <code><font face="courier" size="3">lsadmin</font></code> and <code><font face="courier" size="3">badmin</font></code>, and <code><font face="courier" size="3">eauth</font></code> to a local directory on each host in the cluster. (make sure the local directory is in the PATH; for example, <code><font face="courier" size="3">/usr/bin</font></code> or <code><font face="courier" size="3">/bin</font></code>.)
+</font>
+  </ul>
+  <li><a name="1501642"> </a>
+<font face="Helvetica, Arial, sans-serif">
+If you ran <code><font face="courier" size="3">lsfinstall</font></code> as a non-root user to install a multi-user cluster, you must manually change the ownership for <code><font face="courier" size="3">lsadmin</font></code> and <code><font face="courier" size="3">badmin</font></code> to <code><font face="courier" size="3">root</font></code> and the file permission mode to <code><font face="courier" size="3">-rwsr-xr-x</font></code> (4755) so that the user ID bit for the owner is <code><font face="courier" size="3">setuid</font></code>.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Use the following commands to set the correct owner, user ID bit, and file 
+permission mode for a multi-user cluster:
+ </font></p>
+
+<font size="3">
+<pre>
+# <code><font face="courier" size="3"><strong>chown root lsadmin badmin eauth
+</strong></font></code># <code><font face="courier" size="3"><strong>chmod 4755 lsadmin badmin eauth
+</strong></font></code></pre>
+</font>
+  <li><a name="1501645"> </a>
+<font face="Helvetica, Arial, sans-serif">
+You may also see these messages if you run the <code><font face="courier" size="3">bsub</font></code> command as <code><font face="courier" size="3">root</font></code>.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+By default, you cannot submit jobs with <code><font face="courier" size="3">bsub</font></code> as <code><font face="courier" size="3">root</font></code>. This is a normal security 
+precaution. If you need to submit jobs as <code><font face="courier" size="3">root</font></code>, set LSF_ROOT_REX=local in 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If you continue to see this message, it means that the remote host cannot securely 
+determine the user ID of the user requesting remote execution. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Check:
+ </font></p>
+
+  <ul>
+    <li><a name="1501649"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The messages in <code><font face="courier" size="3">/usr/share/lsf/log/res.log.</font></code><em>host_name</em> on the execution host. <code><font face="courier" size="3">res</font></code> is responsible for authenticating users in LSF
+</font>
+    <li><a name="1501650"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The setting of LSF authentication (LSF_AUTH in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>):
+</font>
+    <ul>
+      <li><a name="1501651"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF default authentication is <code><font face="courier" size="3">eauth</font></code> (LSF_AUTH is not or is defined as <code><font face="courier" size="3">eauth</font></code> in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>)
+</font>
+      <li><a name="1501652"> </a>
+<font face="Helvetica, Arial, sans-serif">
+If LSF_AUTH is defined as <code><font face="courier" size="3">identd</font></code> in <code><font face="courier" size="3">/usr/share/lsf/conf/lsf.conf</font></code>, <code><font face="courier" size="3">identd</font></code> must be installed and running properly on each LSF host
+</font>
+    </ul>
+    <li><a name="1501653"> </a>
+<font face="Helvetica, Arial, sans-serif">
+That the <code><font face="courier" size="3">eauth</font></code> executable in LSF_SERVERDIR (for example, <strong>/usr/share/lsf/10.1/sparc-sol10/etc/eauth)</strong> is implemented correctly
+</font>
+    <li><a name="1501654"> </a>
+<font face="Helvetica, Arial, sans-serif">
+That all LSF commands are owned by <code><font face="courier" size="3">root</font></code> and have the file permission mode to <code><font face="courier" size="3">-rwsr-xr-x</font></code> so that the user ID bit for the owner is <code><font face="courier" size="3">setuid</font></code>
+</font>
+  </ul>
+</ul>
+
+
+
+<div>
+<h4>
+  <a name="1501660"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+5 Submitted jobs do not start
+</font>
+</h4>
+</div>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Many things can prevent jobs from starting. Check:
+ </font></p>
+
+<ul>
+  <li><a name="1501662"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Wait for up to a minute for LSF to dispatch your job. Some LSF activities happen periodically. You may be able to speed up job dispatch by changing the following parameters:
+</font>
+  <ul>
+    <li><a name="1501663"> </a>
+<font face="Helvetica, Arial, sans-serif">
+JOB_ACCEPT_INTERVAL in <code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code>
+</font>
+    <li><a name="1501666"> </a>
+<font face="Helvetica, Arial, sans-serif">
+SBD_SLEEP_TIME in <code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.params</font></code>
+</font>
+  </ul>
+
+
+  <li><a name="1501672"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">bjobs -p</font></code> and check the job pending reason.
+</font>
+  <li><a name="1501673"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Examine the output of <code><font face="courier" size="3">bhosts -l</font></code> for the load thresholds on the hosts and <code><font face="courier" size="3">lsload -E</font></code> for the effective run queue lengths on the hosts.
+</font>
+  <li><a name="1501674"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">bqueues -l</font></code> to check the queue thresholds, host limits, and user limits.
+</font>
+  <li><a name="1501675"> </a>
+<font face="Helvetica, Arial, sans-serif">
+If you submitted the jobs from a host that is the only host of its type in the cluster, by default, LSF tries to run the job on this host only. To run jobs on any available host type, submit the job with a command like:
+</font>
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bsub -R "type==any" myjob
+</strong></font></code></pre>
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If none of these applies to your situation, contact Product Support.
+ </font></p>
+
+
+<h4>
+  <a name="1501679"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+6 LSF jobs go to a slow host while faster hosts are idle
+</font>
+</h4>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Host processor speed is not the only factor in host selection:
+ </font></p>
+
+<ul>
+  <li><a name="1501681"> </a>
+<font face="Helvetica, Arial, sans-serif">
+LSF uses the effective run queue lengths (displayed by <code><font face="courier" size="3">lsload -E</font></code>) to choose the least loaded execution hosts. Two hosts with the same effective run queue length are ordered according to their CPU factors.
+</font>
+  <li><a name="1501682"> </a>
+<font face="Helvetica, Arial, sans-serif">
+By default, LSF runs jobs on hosts of the same type as the submission host. To run jobs on any available host type, submit the job with a command like:
+</font>
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bsub -R "type==any" myjob
+</strong></font></code></pre>
+</font>
+  <li><a name="1501684"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The faster hosts may not be included in the queue where the job was submitted.
+</font>
+  <li><a name="1501685"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The faster hosts may not have the resources required by the job.
+</font>
+  <li><a name="1501686"> </a>
+<font face="Helvetica, Arial, sans-serif">
+The faster hosts may be closed or have closed dispatch windows or closed run windows.
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If none of these applies to your situation, contact Product Support.
+ </font></p>
+
+
+<h4>
+  <a name="1501689"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+7 Application runs fine under UNIX or with lsrun, but fails or hangs when submitted through bsub
+</font>
+</h4>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+On some UNIX systems, certain applications only run with specific limit values. 
+Different limit values or no limits can cause problems for these applications. <code><font face="courier" size="3">lsrun</font></code>, 
+<code><font face="courier" size="3">lsgrun</font></code> and other interactive LSF commands copy the submission host environment, 
+including any limits, to the execution host and <code><font face="courier" size="3">res</font></code> sets the submission environment on 
+the execution host.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF Batch works differently. Jobs run in a queue, and are subject to queue limits, not 
+submission host limits. By default, LSF Batch sets all limits to unlimited and only limits 
+values explicitly set in the queue. To see the limit settings for your queues, use the 
+command:
+ </font></p>
+
+<font size="3">
+<pre>
+% <code><font face="courier" size="3"><strong>bqueues -l -q </strong></font></code><em>queue_name
+</em></pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+To troubleshoot this type of problem:
+ </font></p>
+
+<ol type="1">
+  <li value="1	"><a name="1501694"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Run the application under UNIX to confirm that it works without LSF.
+</font>
+  <li value="2	"><a name="1501695"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Create a small script like this:
+</font>
+<font size="3">
+<pre>
+#!/bin/sh
+# display limits from command line
+# Check the man pages for more limits that can be displayed
+ulimit -Hc
+ulimit -Hd
+ulimit -Sc
+ulimit -Sd
+</pre>
+</font>
+  <li value="3	"><a name="1501697"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Run the script to determine the limits from the submission host under UNIX, and record the limit values.
+</font>
+  <li value="4	"><a name="1501698"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Create a new version of the script, setting the limit values reported by the original script and running the command for your application. For example:
+</font>
+<font size="3">
+<pre>
+#!/bin/sh
+# display limits from command line
+# Check the man pages for more limits that can be displayed
+ulimit -Hc 45333
+ulimit -Hd 256
+ulimit -Sc 24335
+ulimit -Sd 256
+&lt;your application&gt;
+</pre>
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+You can also set these limits in a queue in 
+<code><font face="courier" size="3">/usr/share/lsf/conf/lsbatch/labkdd/configdir/lsb.queues</font></code>.
+ </font></p>
+
+</ol>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Once the limit values are set correctly, your application should run fine under LSF Batch. 
+If it still does not work, contact Product Support.
+ </font></p>
+
+
+<h4>
+  <a name="1501703"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+8 LSF Batch job runs in /tmp or cannot find home directory
+</font>
+</h4>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+The problem could be caused by:
+ </font></p>
+
+<ul>
+  <li><a name="1501705"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Different home directories existing for the same user account on the submission and execution hosts
+</font>
+  <li><a name="1501706"> </a>
+<font face="Helvetica, Arial, sans-serif">
+NFS <code><font face="courier" size="3">automount</font></code> problems cause LSF to look for incorrect mount points
+</font>
+  <li><a name="1501707"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Permissions or ownership of your submission directory is incorrect for the home directory on the execution host
+</font>
+  <li><a name="1501708"> </a>
+<font face="Helvetica, Arial, sans-serif">
+You have a non-shared file system
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+A command may fail with the following error message due to a non-uniform file name 
+space.
+ </font></p>
+
+<font size="3">
+<pre>
+chdir(...) failed: no such file or directory
+</pre>
+</font>
+<p>
+<font face="Helvetica, Arial, sans-serif">
+This error means that you are trying to run a command remotely, and:
+ </font></p>
+
+<ul>
+  <li><a name="1501712"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Your current working directory does not exist on the remote host
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If your current working directory does not exist on a remote host, you should not 
+execute commands remotely on that host.
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+or
+ </font></p>
+
+  <li><a name="1501715"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Your current working directory is mapped to a different name on the remote host.
+</font>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If the directory exists, but is mapped to a different name on the remote host, you 
+must create symbolic links to make them consistent.
+ </font></p>
+
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+LSF can resolve most, but not all, problems using <code><font face="courier" size="3">automount</font></code>. The automount maps 
+must be managed through NIS.
+ </font></p>
+
+
+<h4>
+  <a name="1501718"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+9 Job is killed by some unknown signal or unknown reason
+</font>
+</h4>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+A job exit value smaller than 128 is the real exit value from your application. 
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If neither a user nor an LSF administrator kills the job, check if it was killed because it 
+exceeded a resource usage limit:
+ </font></p>
+
+<ul>
+  <li><a name="1501721"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">bjobs -l</font></code> to check if any limit is specified on the job submission command.
+</font>
+  <li><a name="1501722"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">bqueues -l</font></code> to check if any limit is specified on the queue.
+</font>
+  <li><a name="1501723"> </a>
+<font face="Helvetica, Arial, sans-serif">
+Use <code><font face="courier" size="3">bsub -q -I csh -c limit</font></code> to check if any other limit is set for the job.
+</font>
+</ul>
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+If none of these applies to your situation, contact Product Support.
+ </font></p>
+
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1502039"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Get Technical Support
+</font>
+</h2>
+
+
+
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+Contact IBM or your LSF vendor for technical support. 
+ </font></p>
+
+
+
+
+
+<p align="right">
+<font size="2" face="Helvetica, Arial, sans-serif">
+[ <a href="#top">Top</a> ]</font>
+</p>
+<hr align="left">
+<h2>
+  <a name="1502069"> </a>
+<font color="#003366" face="Helvetica, Arial, sans-serif">
+Copyright
+</font>
+</h2>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+&#169; 1994-2016 International Business Machines Corp
+ </font></p>
+
+
+<p>
+<font face="Helvetica, Arial, sans-serif">
+All rights reserved.
+ </font></p>
+
+
+
+
+</body>
+
+</html>
